@@ -15,8 +15,15 @@ def test_table_width(width, test):
 
 @pytest.mark.parametrize(
     "col, test",
-    [([11, 8, 8], TEST_6)]
+    [
+        ([11, 8, 8], TEST_6),
+        ([12, 8, 8], TEST_7),
+        ([13, 8, 8], TEST_8)
+    ]
 )
 def test_column_width(col, test):
     print("")
-    assert Table(rows=data(*col), table_width=38, center=False).table == test
+    try:
+        assert Table(rows=data(*col), table_width=38, center=False).table == test
+    except AssertionError:
+        raise Exception(f"col = {col}")

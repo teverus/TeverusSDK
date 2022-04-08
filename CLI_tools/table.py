@@ -9,16 +9,19 @@ TODO
 * перекрестья
 """
 
-
 # noinspection PyAttributeOutsideInit
+from math import ceil
+
+
 class Table:
     def __init__(self, rows: list, table_width: int = None, center: bool = True):
         rows_ = rows[:]
         self.rows = rows_ if isinstance(rows_, list) else [rows_]
         self.table_width = table_width
         self.center = center
-        self.balance = 0
+        self.table_balance = 0
         self.need_to_balance = 0
+        self.col_balance = 0
 
         self.force_string_type_on_the_data()
         self.calculate_column_widths()
@@ -55,37 +58,53 @@ class Table:
         self.equal_w = int(self.available_width / self.col_number)
 
     def create_rows(self):
-        is_perfect = self.available_width == self.columns_sum
         optimal = self.equal_w * self.col_number
         table_diff = self.available_width - optimal
-        column_diff = [c for c in list(self.column_lengths.values()) if c > self.equal_w]
+        big_col = [c for c in list(self.column_lengths.values()) if c > self.equal_w]
 
         for row_index, row in enumerate(self.rows):
             row = row if isinstance(row, list) else [row]
 
             for col_index, line in enumerate(row):
-                if is_perfect:
-                    padding = self.equal_w
-                else:
-                    if self.balance != table_diff:
-                        if self.available_width == (self.equal_w * self.col_number):
-                            padding = self.equal_w
-                        else:
-                            padding = self.equal_w + 1
-                            self.balance += 1
+                if self.table_balance != table_diff:
+                    if self.available_width == (self.equal_w * self.col_number):
+                        padding = self.equal_w
                     else:
-                        if column_diff:
-                            if self.column_lengths[col_index] > self.equal_w:
-                                # TODO должен быть предел
-                                padding = self.column_lengths[col_index]
-                                extra_w = self.column_lengths[col_index] - self.equal_w
-                                self.need_to_balance = extra_w
+                        padding = self.equal_w + 1
+                        self.table_balance += 1
+                elif big_col:
+                    if self.column_lengths[col_index] > self.equal_w:
+                        # TODO должен быть предел
+                        padding = self.column_lengths[col_index]
+                        extra_w = self.column_lengths[col_index] - self.equal_w
+                        self.need_to_balance = extra_w
+                    else:
+                        left_to_cover = self.need_to_balance - self.col_balance
+                        if left_to_cover:
+                            small_columns = self.col_number - len(big_col)
+                            try_to_cover = ceil(self.need_to_balance / small_columns)
+                            if try_to_cover < left_to_cover:
+                                padding = self.equal_w - try_to_cover
+                                self.col_balance += try_to_cover
                             else:
-                                if self.balance != self.need_to_balance:
-                                    padding = self.equal_w - 1
-                                    self.balance += 1
+                                padding = self.equal_w - left_to_cover
+                                self.col_balance += left_to_cover
                         else:
                             padding = self.equal_w
+                        # if self.col_balance != self.need_to_balance:
+                        #     left_to_cover = self.need_to_balance - self.col_balance
+                        #     small_columns = self.col_number - len(big_col)
+                        #     try_to_cover = ceil(self.need_to_balance / small_columns)
+                        #
+                        #     if try_to_cover < left_to_cover:
+                        #         padding = self.equal_w - try_to_cover
+                        #         self.col_balance += try_to_cover
+                        #     else:
+                        #         padding = self.equal_w - left_to_cover
+                        # else:
+                        #     padding = self.equal_w
+                else:
+                    padding = self.equal_w
 
                 # line = f"{line[:12]}~" if len(line) > padding else line
                 alignment = line.center if self.center else line.ljust
@@ -116,4 +135,4 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    Table(rows=data(12, 8, 8), table_width=38, center=False)
+    Table(rows=data(13, 8, 8), table_width=38, center=False)
