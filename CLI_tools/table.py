@@ -6,14 +6,16 @@
 * перекрестья
 """
 
+
+# noinspection PyAttributeOutsideInit
 from math import ceil
 
 
-# noinspection PyAttributeOutsideInit
 class Table:
     def __init__(self, rows: list, table_width: int = None, center: bool = True):
         rows_ = rows[:]
         self.rows = rows_ if isinstance(rows_, list) else [rows_]
+        self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
         self.table_width = table_width
         self.center = center
         self.table_balance = 0
@@ -31,14 +33,12 @@ class Table:
 
     def force_string_type_on_the_data(self):
         for row in self.rows:
-            row = row if isinstance(row, list) else [row]
             for index, line in enumerate(row):
                 row[index] = str(line)
 
     def calculate_column_widths(self):
         self.column_lengths = {column: 0 for column in range(len(self.rows[0]))}
         for row in self.rows:
-            row = row if isinstance(row, list) else [row]
             for index, line in enumerate(row):
                 if len(line) > self.column_lengths[index]:
                     self.column_lengths[index] = len(line)
@@ -55,37 +55,41 @@ class Table:
         self.equal_width = int(self.available_width / self.col_number)
 
     def create_rows(self):
-        optimal = self.equal_width * self.col_number
-        table_diff = self.available_width - optimal
+        table_diff = self.available_width - self.equal_width * self.col_number
         column_lengths = list(self.column_lengths.values())
         big_col = [c for c in column_lengths if c > self.equal_width]
 
         for row_index, row in enumerate(self.rows):
             row = row if isinstance(row, list) else [row]
 
-            for col_index, line in enumerate(row):
+            for col_index, column in enumerate(row):
                 current_column_width = self.column_lengths[col_index]
 
                 padding = self.equal_width
 
+                # If table_width is too big
                 if self.table_balance != table_diff:
                     if self.available_width == (self.equal_width * self.col_number):
                         padding = self.equal_width
                     else:
                         padding = self.equal_width + 1
                         self.table_balance += 1
+
+                # If one of the columns is bigger than an equal width column
                 elif big_col:
                     if current_column_width > self.equal_width:
                         max_col = max(column_lengths)
                         rem_length = sum([c for c in column_lengths if c != max_col])
                         max_column_width = self.available_width - rem_length
 
-                        if current_column_width > max_column_width:
+                        condition1 = current_column_width > max_column_width
+                        condition2 = current_column_width == max_col
+                        if condition1 and condition2:
                             too_much = current_column_width - max_column_width
                             middle = int(max_column_width/2)
-                            part1 = line[:middle]
-                            part2 = line[middle + 1 + too_much:]
-                            line = f"{part1}~{part2}"
+                            part1 = column[:middle]
+                            part2 = column[middle + 1 + too_much:]
+                            column = f"{part1}~{part2}"
                             padding = max_column_width
                         else:
                             padding = current_column_width
@@ -104,7 +108,7 @@ class Table:
                                 padding = self.equal_width - left_to_cover
                                 self.col_balance += left_to_cover
 
-                alignment = line.center if self.center else line.ljust
+                alignment = column.center if self.center else column.ljust
                 row[col_index] = alignment(padding, "*")
 
             self.rows[row_index] = f' {" | ".join(row)} '
@@ -132,4 +136,15 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    Table(rows=data(14, 11, 6), table_width=38, center=False)
+    # 14, 9, 6
+    # 14, 10, 6
+    # 14, 13, 6
+    # 14, 14, 6
+    print("123456789|123456789|123456789|123456789|12345")
+    Table(rows=data(14, 13, 6), table_width=38, center=False)
+'''
+ 123456~89234 | 123456~90123 | 123456|
+--------------------------------------
+ 12345~901234 | 123456789012 | 123456 
+--------------------------------------
+'''
