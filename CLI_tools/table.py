@@ -1,9 +1,6 @@
 """
-TODO
-* !!! ЕСЛИ СУММА КОЛОНОК БОЛЬШЕ self.actual_width
 * верхняя линия
 * нижняя линия
-
 * index_columns
 * thead
 * перекрестья
@@ -79,9 +76,9 @@ class Table:
                         self.table_balance += 1
                 elif big_col:
                     if current_column_width > self.equal_width:
-                        col_lens = enumerate(column_lengths)
-                        rest_of_length = sum([c for i, c in col_lens if i != col_index])
-                        max_column_width = self.available_width - rest_of_length
+                        max_col = max(column_lengths)
+                        rem_length = sum([c for c in column_lengths if c != max_col])
+                        max_column_width = self.available_width - rem_length
 
                         if current_column_width > max_column_width:
                             too_much = current_column_width - max_column_width
@@ -135,4 +132,4 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    Table(rows=data(13, 11, 6), table_width=38, center=False)
+    Table(rows=data(14, 11, 6), table_width=38, center=False)

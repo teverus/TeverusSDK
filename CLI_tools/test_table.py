@@ -23,7 +23,8 @@ def test_table_width(width, test):
         ([14, 8, 8], TEST_10),
         ([15, 8, 8], TEST_11),
         ([16, 8, 8], TEST_12),
-        ([11, 11, 8], TEST_13)
+        ([11, 11, 8], TEST_13),
+        ([14, 11, 6], TEST_14)
     ],
 )
 def test_column_width(col, test):
