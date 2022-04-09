@@ -16,10 +16,15 @@ def test_table_width(width, test):
 @pytest.mark.parametrize(
     "col, test",
     [
-        ([11, 8, 8], TEST_6),
-        ([12, 8, 8], TEST_7),
-        ([13, 8, 8], TEST_8)
-    ]
+        ([10, 8, 8], TEST_6),
+        ([11, 8, 8], TEST_7),
+        ([12, 8, 8], TEST_8),
+        ([13, 8, 8], TEST_9),
+        ([14, 8, 8], TEST_10),
+        ([15, 8, 8], TEST_11),
+        ([16, 8, 8], TEST_12),
+        ([11, 11, 8], TEST_13)
+    ],
 )
 def test_column_width(col, test):
     print("")
