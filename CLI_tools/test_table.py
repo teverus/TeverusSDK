@@ -1,7 +1,7 @@
 import pytest as pytest
 
 from CLI_tools.constants import *
-from CLI_tools.table import Table, data
+from CLI_tools.table import data, Table2
 
 
 @pytest.mark.parametrize(
@@ -10,7 +10,7 @@ from CLI_tools.table import Table, data
 )
 def test_table_width(width, test):
     print("")
-    assert Table(rows=data(10, 10, 10), table_width=width, center=False).table == test
+    assert Table2(rows=data(10, 10, 10), table_width=width, center=False).table == test
 
 
 @pytest.mark.parametrize(
@@ -26,12 +26,14 @@ def test_table_width(width, test):
         ([11, 11, 8], TEST_13),
         ([14, 11, 6], TEST_14),
         ([14, 12, 6], TEST_15),
-        ([14, 13, 6], TEST_16)
+        ([14, 13, 6], TEST_16),
+        ([14, 9, 6], TEST_17)
     ],
 )
 def test_column_width(col, test):
     print("")
-    try:
-        assert Table(rows=data(*col), table_width=38, center=False).table == test
-    except AssertionError:
-        raise Exception(f"col = {col}")
+    assert Table2(rows=data(*col), table_width=38, center=False).table == test
+    # try:
+    #     assert Table2(rows=data(*col), table_width=38, center=False).table == test
+    # except AssertionError:
+    #     raise Exception(f"col = {col}")
