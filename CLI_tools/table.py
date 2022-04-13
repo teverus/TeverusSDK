@@ -268,13 +268,14 @@ class Table3:
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
         self.width_total = table_width
         self.center = center
-        self.table_top_border = table_top_border
-        self.table_bottom_border = table_bottom_border
+        self.border_top = table_top_border
+        self.border_bottom = table_bottom_border
 
         # Calculated values
-        self.widths_max = {}
         self.walls = 0
         self.inner_padding = 0
+        self.extra = 0
+        self.widths_max = {}
         self.width_to_be_covered = 0
         self.widths_target = 0
 
@@ -306,8 +307,8 @@ class Table3:
         self.walls = column_number - 1
         self.inner_padding = column_number * 2
 
-        extra = self.walls + self.inner_padding
-        self.width_to_be_covered = sum(self.widths_max.values()) + extra
+        self.extra = self.walls + self.inner_padding
+        self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
 
     def calculate_paddings(self):
         if self.width_to_be_covered > self.width_total:
@@ -316,23 +317,25 @@ class Table3:
             )
 
         elif self.width_to_be_covered < self.width_total:
-            raise Exception("!!!!!!!")
-
-        else:
-            self.widths_target = self.widths_max
+            while self.width_to_be_covered != self.width_total:
+                min_value = min(self.widths_max.values())
+                width_min = [k for k, v in self.widths_max.items() if v == min_value]
+                index = max(width_min)
+                self.widths_max[index] += 1
+                self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
 
     def calculate_columns(self):
         for index_row, row in enumerate(self.rows):
             for index_col, column in enumerate(row):
 
                 alignment = column.center if self.center else column.ljust
-                row[index_col] = alignment(self.widths_target[index_col], "*")
+                row[index_col] = alignment(self.widths_max[index_col], "*")
 
             self.rows[index_row] = f' {" | ".join(row)}^'
 
     def print_the_table(self):
-        table_top = self.table_top_border * self.width_total
-        table_bottom = self.table_bottom_border * self.width_total
+        table_top = self.border_top * self.width_total
+        table_bottom = self.border_bottom * self.width_total
 
         print(table_top)
         [print(row) for row in self.rows]
@@ -359,10 +362,10 @@ if __name__ == "__main__":
     # Table2(rows=data(1, 1, 1), table_width=20, center=False)
     Table3(
         rows=[
-            [12345, "world", "pig"],
-            [1, 123456, 1]
+            [11111111111, 1, 1],
+            [1, 1, 1]
         ],
-        table_width=22,
+        table_width=21,
         center=False
     )
 """
