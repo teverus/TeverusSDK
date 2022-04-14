@@ -342,7 +342,7 @@ class Table3:
 
                 if column_width > target_width:
                     tail = column[-3:]
-                    head = column[:(target_width - len(tail) - 1)]
+                    head = column[: (target_width - len(tail) - 1)]
                     column = f"{head}~{tail}"
 
                 def_alignment = {"left": column.ljust, "right": column.rjust}
@@ -366,23 +366,19 @@ class Table3:
 def data(*args):
     columns = []
     for arg in args:
-        string = ""
-        for num in range(arg):
-            number = num + 1 if num < 9 else num - 9
-            string = f"{string}{str(number)}"
-        columns.append(string)
+        arg = [arg] if not isinstance(arg, list) else arg
 
-    return [columns]
+        column = []
+        for element in arg:
+            string = ""
+            for num in range(element):
+                number = num + 1 if num < 9 else num - 9
+                string = f"{string}{str(number)}"
+            column.append(string)
+        columns.append(column)
+
+    return columns
 
 
 if __name__ == "__main__":
-    # 14, 14, 6 // 38
-    # print("123456789|123456789|123456789|123456789|12345")
-    # Table2(rows=data(1, 1, 1), table_width=20, center=False)
-    Table3(
-        rows=[
-            [12345678901234, 1, 11],
-            [1, 1, 1]
-        ],
-        table_width=21,
-    )
+    Table3(rows=data([14, 14, 6], [1, 1, 1]), table_width=38)
