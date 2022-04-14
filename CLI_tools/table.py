@@ -258,16 +258,22 @@ class Table3:
         self,
         rows: list,
         table_width: int = None,
-        center: bool = True,
+        center: bool = False,
+        default_alignment: str = "left",
         table_top_border: str = "-",
         table_bottom_border: str = "-",
     ):
+        """
+        * default_alignment can be "left" or "right"
+        * if center is True, default_alignment isn't applied
+        """
 
         # Given values
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
         self.width_total = table_width
         self.center = center
+        self.alignment = default_alignment
         self.border_top = table_top_border
         self.border_bottom = table_bottom_border
 
@@ -312,9 +318,13 @@ class Table3:
 
     def calculate_paddings(self):
         if self.width_to_be_covered > self.width_total:
-            raise Exception(
-                f"[ERROR] You must use table_width at least {self.width_to_be_covered}"
-            )
+            while self.width_to_be_covered != self.width_total:
+                # TODO вот это как-то вынести?
+                max_value = max(self.widths_max.values())
+                width_max = [k for k, v in self.widths_max.items() if v == max_value]
+                index = max(width_max)
+                self.widths_max[index] -= 1
+                self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
 
         elif self.width_to_be_covered < self.width_total:
             while self.width_to_be_covered != self.width_total:
@@ -327,11 +337,20 @@ class Table3:
     def calculate_columns(self):
         for index_row, row in enumerate(self.rows):
             for index_col, column in enumerate(row):
+                column_width = len(column)
+                target_width = self.widths_max[index_col]
 
-                alignment = column.center if self.center else column.ljust
-                row[index_col] = alignment(self.widths_max[index_col], "*")
+                if column_width > target_width:
+                    tail = column[-3:]
+                    head = column[:(target_width - len(tail) - 1)]
+                    column = f"{head}~{tail}"
 
-            self.rows[index_row] = f' {" | ".join(row)}^'
+                def_alignment = {"left": column.ljust, "right": column.rjust}
+                align = column.center if self.center else def_alignment[self.alignment]
+
+                row[index_col] = align(target_width, "*")
+
+            self.rows[index_row] = f' {" | ".join(row)} '
 
     def print_the_table(self):
         table_top = self.border_top * self.width_total
@@ -358,15 +377,12 @@ def data(*args):
 
 if __name__ == "__main__":
     # 14, 14, 6 // 38
-    print("123456789|123456789|123456789|123456789|12345")
+    # print("123456789|123456789|123456789|123456789|12345")
     # Table2(rows=data(1, 1, 1), table_width=20, center=False)
     Table3(
         rows=[
-            [11111111111, 1, 1],
+            [12345678901234, 1, 11],
             [1, 1, 1]
         ],
         table_width=21,
-        center=False
     )
-"""
-"""
