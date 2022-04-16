@@ -1,5 +1,4 @@
 """
-* index_columns
 * thead
 * перекрестья
 """
@@ -15,6 +14,7 @@ class Table:
         default_alignment: str = "left",
         table_top_border: str = "-",
         table_bottom_border: str = "-",
+        show_index: bool = True,
     ):
         """
         * default_alignment can be "left" or "right"
@@ -29,6 +29,7 @@ class Table:
         self.alignment = default_alignment
         self.border_top = table_top_border
         self.border_bottom = table_bottom_border
+        self.show_index = show_index
 
         # Calculated values
         self.walls = 0
@@ -37,6 +38,7 @@ class Table:
         self.widths_max = {}
         self.width_to_be_covered = 0
         self.widths_target = 0
+        self.width_index = len(str(len(self.rows)))
 
         self.table = None
 
@@ -56,12 +58,16 @@ class Table:
 
     def perform_column_analysis(self):
         column_number = len(self.rows[0])
+        column_number = column_number + 1 if self.show_index else column_number
 
         self.widths_max = {index: 0 for index, _ in enumerate(self.rows[0])}
         for row in self.rows:
             for index, column in enumerate(row):
                 if self.widths_max[index] < len(column):
                     self.widths_max[index] = len(column)
+
+        if self.show_index:
+            self.widths_max[-1] = self.width_index
 
         self.walls = column_number - 1
         self.inner_padding = column_number * 2
@@ -80,13 +86,13 @@ class Table:
 
     def adjust_widths(self, minimum=False, maximum=False):
         if minimum:
-            value = min(self.widths_max.values())
+            value = min([v for k, v in self.widths_max.items() if k != -1])
         elif maximum:
             value = max(self.widths_max.values())
         else:
             raise Exception("[ERROR] You must choose either minimum or maximum")
 
-        index = max([k for k, v in self.widths_max.items() if v == value])
+        index = max([k for k, v in self.widths_max.items() if k != -1 and v == value])
 
         if minimum:
             self.widths_max[index] += 1
@@ -113,7 +119,9 @@ class Table:
 
                 row[index_col] = align(target_width, "*")
 
-            self.rows[index_row] = f' {" | ".join(row)} '
+            index = f" {str(index_row + 1).rjust(self.width_index)} |"
+            rows = f" {' | '.join(row)} "
+            self.rows[index_row] = f"{index}{rows}" if self.show_index else rows
 
     def print_the_table(self):
         table_top = self.border_top * self.width_total
@@ -126,6 +134,7 @@ class Table:
         self.table = [table_top] + self.rows + [table_bottom]
 
 
+# TODO remove
 def data(*args):
     columns = []
     for arg in args:
@@ -144,4 +153,19 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    Table(rows=data([14, 17, 6], [1, 1, 1]), table_width=38)
+    Table(
+        data(
+            [14, 3, 2],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            # [1, 1, 1],
+        ),
+        table_width=38,
+        # show_index=False
+    )
