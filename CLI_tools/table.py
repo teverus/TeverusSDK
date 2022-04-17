@@ -1,5 +1,5 @@
 """
-* thead
+* центрирование для шапки таблицы
 * перекрестья
 """
 
@@ -7,14 +7,15 @@
 # noinspection PyAttributeOutsideInit
 class Table:
     def __init__(
-        self,
-        rows: list,
-        table_width: int = None,
-        center: bool = False,
-        default_alignment: str = "left",
-        table_top_border: str = "-",
-        table_bottom_border: str = "-",
-        show_index: bool = True,
+            self,
+            rows: list,
+            headers: list = (),
+            table_width: int = None,
+            center: bool = False,
+            default_alignment: str = "left",
+            table_top_border: str = "-",
+            table_bottom_border: str = "-",
+            show_index: bool = True,
     ):
         """
         * default_alignment can be "left" or "right"
@@ -24,6 +25,7 @@ class Table:
         # Given values
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
+        self.headers = [headers]
         self.width_total = table_width
         self.center = center
         self.alignment = default_alignment
@@ -44,7 +46,7 @@ class Table:
 
         # Preparing the table
         self.force_string_type_on_the_data()
-        self.perform_column_analysis()
+        self.perform_width_analysis()
         self.calculate_paddings()
         self.calculate_columns()
 
@@ -56,12 +58,12 @@ class Table:
             for index, line in enumerate(row):
                 row[index] = str(line)
 
-    def perform_column_analysis(self):
+    def perform_width_analysis(self):
         column_number = len(self.rows[0])
         column_number = column_number + 1 if self.show_index else column_number
 
         self.widths_max = {index: 0 for index, _ in enumerate(self.rows[0])}
-        for row in self.rows:
+        for row in self.headers + self.rows:
             for index, column in enumerate(row):
                 if self.widths_max[index] < len(column):
                     self.widths_max[index] = len(column)
@@ -104,7 +106,11 @@ class Table:
         self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
 
     def calculate_columns(self):
-        for index_row, row in enumerate(self.rows):
+        for element in (self.headers, self.rows):
+            self.create_columns(element)
+
+    def create_columns(self, some_list):
+        for index_row, row in enumerate(some_list):
             for index_col, column in enumerate(row):
                 column_width = len(column)
                 target_width = self.widths_max[index_col]
@@ -121,14 +127,19 @@ class Table:
 
             index = f" {str(index_row + 1).rjust(self.width_index)} |"
             rows = f" {' | '.join(row)} "
-            self.rows[index_row] = f"{index}{rows}" if self.show_index else rows
+
+            if [row] == self.headers:
+                self.headers[index_row] = rows
+            else:
+                some_list[index_row] = f"{index}{rows}" if self.show_index else rows
 
     def print_the_table(self):
         table_top = self.border_top * self.width_total
         table_bottom = self.border_bottom * self.width_total
 
         print(table_top)
-        [print(row) for row in self.rows]
+        table = self.rows if self.headers == ["  "] else self.headers + self.rows
+        [print(row) for row in table]
         print(table_bottom)
 
         self.table = [table_top] + self.rows + [table_bottom]
@@ -154,8 +165,8 @@ def data(*args):
 
 if __name__ == "__main__":
     Table(
-        data(
-            [14, 3, 2],
+        rows=data(
+            [1, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
@@ -166,6 +177,7 @@ if __name__ == "__main__":
             [1, 1, 1],
             # [1, 1, 1],
         ),
+        # headers=["Badger", "Racoon", "Pig"],
         table_width=38,
-        # show_index=False
+        show_index=False,
     )
