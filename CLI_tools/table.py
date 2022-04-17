@@ -179,5 +179,6 @@ if __name__ == "__main__":
         ),
         # headers=["Badger", "Racoon", "Pig"],
         table_width=38,
+        # TODO теперь надо с show_index
         show_index=False,
     )
