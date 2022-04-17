@@ -1,6 +1,4 @@
 """
-* центрирование для шапки таблицы
-* перекрестья
 """
 
 
@@ -120,6 +118,8 @@ class Table:
                     head = column[: (target_width - len(tail) - 1)]
                     column = f"{head}~{tail}"
 
+                # TODO центрирование для шапки таблицы
+                # TODO upper для шапки таблицы
                 def_alignment = {"left": column.ljust, "right": column.rjust}
                 align = column.center if self.center else def_alignment[self.alignment]
 
@@ -129,7 +129,8 @@ class Table:
             rows = f" {' | '.join(row)} "
 
             if [row] == self.headers:
-                self.headers[index_row] = rows
+                if row:
+                    self.headers[index_row] = rows
             else:
                 some_list[index_row] = f"{index}{rows}" if self.show_index else rows
 
@@ -137,9 +138,11 @@ class Table:
         table_top = self.border_top * self.width_total
         table_bottom = self.border_bottom * self.width_total
 
+        if self.headers != [()]:
+            print(self.headers[0])
+        # TODO перекрестья
         print(table_top)
-        table = self.rows if self.headers == ["  "] else self.headers + self.rows
-        [print(row) for row in table]
+        [print(row) for row in self.rows]
         print(table_bottom)
 
         self.table = [table_top] + self.rows + [table_bottom]
@@ -177,9 +180,7 @@ if __name__ == "__main__":
             [1, 1, 1],
             # [1, 1, 1],
         ),
-        # headers=["Badger", "Racoon", "Pig"],
+        headers=["Badger", "Racoon", "Pig"],
         table_width=38,
         show_index=False,
     )
-
-# hello world2
