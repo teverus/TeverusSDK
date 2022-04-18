@@ -5,16 +5,16 @@
 # noinspection PyAttributeOutsideInit
 class Table:
     def __init__(
-            self,
-            rows: list,
-            headers: list = (),
-            headers_top_border: str = "-",
-            table_width: int = None,
-            center: bool = False,
-            default_alignment: str = "left",
-            table_top_border: str = "-",
-            table_bottom_border: str = "-",
-            show_index: bool = True,
+        self,
+        rows: list,
+        headers: list = (),
+        headers_top_border: str = "-",
+        table_width: int = None,
+        center: bool = False,
+        default_alignment: str = "left",
+        table_top_border: str = "-",
+        table_bottom_border: str = "-",
+        show_index: bool = True,
     ):
         """
         * default_alignment can be "left" or "right"
@@ -42,7 +42,7 @@ class Table:
         self.widths_target = 0
         self.width_index = len(str(len(self.rows)))
 
-        self.table = None
+        self.table = []
 
         # Preparing the table
         self.force_string_type_on_the_data()
@@ -145,12 +145,12 @@ class Table:
         if headers:
             print(headers_top)
             print(headers)
+            [self.table.append(element) for element in [headers_top, headers]]
         print(table_top)
         [print(row) for row in self.rows]
         print(table_bottom)
 
-        # TODO надо передавать
-        self.table = [table_top] + self.rows + [table_bottom]
+        [self.table.append(e) for e in [table_top, *self.rows, table_bottom]]
 
     def get_table_top(self):
         if self.headers == [()]:
@@ -181,12 +181,12 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    Table(
+    aaa = Table(
         rows=data(
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            [10, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
@@ -196,5 +196,6 @@ if __name__ == "__main__":
         ),
         headers=["Badger", "Racoon", "Pig"],
         table_width=38,
+        # TODO headers + show_index
         show_index=False,
-    )
+    ).table
