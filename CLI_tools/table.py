@@ -8,6 +8,7 @@ class Table:
             self,
             rows: list,
             headers: list = (),
+            headers_top_border: str = "-",
             table_width: int = None,
             center: bool = False,
             default_alignment: str = "left",
@@ -24,6 +25,7 @@ class Table:
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
         self.headers = [headers]
+        self.headers_top_border = headers_top_border
         self.width_total = table_width
         self.center = center
         self.alignment = default_alignment
@@ -135,17 +137,29 @@ class Table:
                 some_list[index_row] = f"{index}{rows}" if self.show_index else rows
 
     def print_the_table(self):
-        table_top = self.border_top * self.width_total
+        headers = self.headers[0]
+        headers_top = self.headers_top_border * self.width_total if headers else ""
+        table_top = self.get_table_top()
         table_bottom = self.border_bottom * self.width_total
 
-        if self.headers != [()]:
-            print(self.headers[0])
-        # TODO перекрестья
+        if headers:
+            print(headers_top)
+            print(headers)
         print(table_top)
         [print(row) for row in self.rows]
         print(table_bottom)
 
+        # TODO надо передавать
         self.table = [table_top] + self.rows + [table_bottom]
+
+    def get_table_top(self):
+        if self.headers == [()]:
+            return self.border_top * self.width_total
+        else:
+            columns = [f"{self.border_top * w}" for w in self.widths_max.values()]
+            columns_with_walls = f"{self.border_top}+{self.border_top}".join(columns)
+            border_full = f"{self.border_top}{columns_with_walls}{self.border_top}"
+            return border_full
 
 
 # TODO remove
