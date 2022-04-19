@@ -132,7 +132,9 @@ class Table:
 
             if [row] == self.headers:
                 if row:
-                    self.headers[index_row] = rows
+                    index = index.replace("1", "#")
+                    table_head = f'{index}{rows}' if self.show_index else rows
+                    self.headers[index_row] = table_head
             else:
                 some_list[index_row] = f"{index}{rows}" if self.show_index else rows
 
@@ -156,7 +158,12 @@ class Table:
         if self.headers == [()]:
             return self.border_top * self.width_total
         else:
-            columns = [f"{self.border_top * w}" for w in self.widths_max.values()]
+            if self.show_index:
+                all_but_index = [v for k, v in self.widths_max.items() if k != -1]
+                widths = [f"{self.border_top * w}" for w in all_but_index]
+                columns = ["-"] + widths
+            else:
+                columns = [f"{self.border_top * w}" for w in self.widths_max.values()]
             columns_with_walls = f"{self.border_top}+{self.border_top}".join(columns)
             border_full = f"{self.border_top}{columns_with_walls}{self.border_top}"
             return border_full
@@ -183,10 +190,10 @@ def data(*args):
 if __name__ == "__main__":
     aaa = Table(
         rows=data(
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 9],
-            [10, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
             [1, 1, 1],
@@ -196,6 +203,5 @@ if __name__ == "__main__":
         ),
         headers=["Badger", "Racoon", "Pig"],
         table_width=38,
-        # TODO headers + show_index
-        show_index=False,
+        # show_index=False,
     ).table
