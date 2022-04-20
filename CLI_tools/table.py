@@ -7,33 +7,44 @@ class Table:
     def __init__(
         self,
         rows: list,
-        headers: list = (),
-        headers_top_border: str = "-",
-        table_width: int = None,
         center: bool = False,
         default_alignment: str = "left",
+
+        headers: list = (),
+        headers_top_border: str = "-",
+        headers_centered: bool = False,
+
+        table_width: int = None,
+        show_index: bool = True,
         table_top_border: str = "-",
         table_bottom_border: str = "-",
-        show_index: bool = True,
     ):
         """
         * default_alignment can be "left" or "right"
         * if center is True, default_alignment isn't applied
         """
 
-        # Given values
+        # === Given values
+
+        # Rows
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
+
+        # Headers
         self.headers = [headers]
         self.headers_top_border = headers_top_border
+        self.headers_centered = headers_centered
+
+        # Table
         self.width_total = table_width
         self.center = center
         self.alignment = default_alignment
-        self.border_top = table_top_border
-        self.border_bottom = table_bottom_border
         self.show_index = show_index
 
-        # Calculated values
+        self.border_top = table_top_border
+        self.border_bottom = table_bottom_border
+
+        # === Calculated values
         self.walls = 0
         self.inner_padding = 0
         self.extra = 0
@@ -44,13 +55,13 @@ class Table:
 
         self.table = []
 
-        # Preparing the table
+        # === Preparing the table
         self.force_string_type_on_the_data()
         self.perform_width_analysis()
         self.calculate_paddings()
         self.calculate_columns()
 
-        # Printing the table
+        # === Printing the table
         self.print_the_table()
 
     def force_string_type_on_the_data(self):
@@ -127,13 +138,14 @@ class Table:
 
                 row[index_col] = align(target_width, "*")
 
+            # TODO возможность задавать wall
             index = f" {str(index_row + 1).rjust(self.width_index)} |"
             rows = f" {' | '.join(row)} "
 
             if [row] == self.headers:
                 if row:
                     index = index.replace("1", "#")
-                    table_head = f'{index}{rows}' if self.show_index else rows
+                    table_head = f"{index}{rows}" if self.show_index else rows
                     self.headers[index_row] = table_head
             else:
                 some_list[index_row] = f"{index}{rows}" if self.show_index else rows
@@ -202,6 +214,7 @@ if __name__ == "__main__":
             # [1, 1, 1],
         ),
         headers=["Badger", "Racoon", "Pig"],
+        headers_centered=True,
         table_width=38,
         # show_index=False,
     ).table
