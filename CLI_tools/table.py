@@ -14,6 +14,7 @@ class Table:
             headers: list = (),
             headers_centered: bool = False,
             headers_top_border: str = "-",
+            headers_upper: bool = False,
 
             table_width: int = None,
             show_index: bool = True,
@@ -34,8 +35,9 @@ class Table:
 
         # Headers
         self.headers = [headers]
-        self.headers_top_border = headers_top_border
         self.headers_centered = headers_centered
+        self.headers_top_border = headers_top_border
+        self.headers_upper = headers_upper
 
         # Table
         self.width_total = table_width
@@ -128,13 +130,13 @@ class Table:
                     head = column[: (target_width - len(tail) - 1)]
                     column = f"{head}~{tail}"
 
-                # TODO upper для шапки таблицы
-
                 is_header = [row] == self.headers
                 alignment = self.headers_centered if is_header else self.rows_centered
                 align = column.center if alignment else column.ljust
 
                 row[index_col] = align(target_width, "*")
+                if is_header and self.headers_upper:
+                    row[index_col] = row[index_col].upper()
 
             # TODO возможность задавать wall
             index = f" {str(index_row + 1).rjust(self.width_index)} |"
@@ -213,6 +215,7 @@ if __name__ == "__main__":
         ),
         headers=["Badger", "Racoon", "Pig"],
         headers_centered=True,
+        headers_upper=True,
         rows_centered=True,
         # show_index=False,
         table_width=38,
