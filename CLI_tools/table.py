@@ -5,19 +5,19 @@
 # noinspection PyAttributeOutsideInit
 class Table:
     def __init__(
-        self,
-        rows: list,
-        center: bool = False,
-        default_alignment: str = "left",
+            self,
+            rows: list,
+            rows_centered: bool = False,
+            rows_border_top: str = "-",
+            rows_bottom_border: str = "-",
 
-        headers: list = (),
-        headers_top_border: str = "-",
-        headers_centered: bool = False,
+            headers: list = (),
+            headers_centered: bool = False,
+            headers_top_border: str = "-",
 
-        table_width: int = None,
-        show_index: bool = True,
-        table_top_border: str = "-",
-        table_bottom_border: str = "-",
+            table_width: int = None,
+            show_index: bool = True,
+
     ):
         """
         * default_alignment can be "left" or "right"
@@ -25,10 +25,12 @@ class Table:
         """
 
         # === Given values
-
         # Rows
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
+        self.rows_centered = rows_centered
+        self.rows_border_top = rows_border_top
+        self.rows_border_bottom = rows_bottom_border
 
         # Headers
         self.headers = [headers]
@@ -37,12 +39,7 @@ class Table:
 
         # Table
         self.width_total = table_width
-        self.center = center
-        self.alignment = default_alignment
         self.show_index = show_index
-
-        self.border_top = table_top_border
-        self.border_bottom = table_bottom_border
 
         # === Calculated values
         self.walls = 0
@@ -131,10 +128,11 @@ class Table:
                     head = column[: (target_width - len(tail) - 1)]
                     column = f"{head}~{tail}"
 
-                # TODO центрирование для шапки таблицы
                 # TODO upper для шапки таблицы
-                def_alignment = {"left": column.ljust, "right": column.rjust}
-                align = column.center if self.center else def_alignment[self.alignment]
+
+                is_header = [row] == self.headers
+                alignment = self.headers_centered if is_header else self.rows_centered
+                align = column.center if alignment else column.ljust
 
                 row[index_col] = align(target_width, "*")
 
@@ -154,7 +152,7 @@ class Table:
         headers = self.headers[0]
         headers_top = self.headers_top_border * self.width_total if headers else ""
         table_top = self.get_table_top()
-        table_bottom = self.border_bottom * self.width_total
+        table_bottom = self.rows_border_bottom * self.width_total
 
         if headers:
             print(headers_top)
@@ -168,16 +166,16 @@ class Table:
 
     def get_table_top(self):
         if self.headers == [()]:
-            return self.border_top * self.width_total
+            return self.rows_border_top * self.width_total
         else:
             if self.show_index:
                 all_but_index = [v for k, v in self.widths_max.items() if k != -1]
-                widths = [f"{self.border_top * w}" for w in all_but_index]
-                columns = ["-"] + widths
+                widths = [f"{self.rows_border_top * w}" for w in all_but_index]
+                col = ["-"] + widths
             else:
-                columns = [f"{self.border_top * w}" for w in self.widths_max.values()]
-            columns_with_walls = f"{self.border_top}+{self.border_top}".join(columns)
-            border_full = f"{self.border_top}{columns_with_walls}{self.border_top}"
+                col = [f"{self.rows_border_top * w}" for w in self.widths_max.values()]
+            columns_walls = f"{self.rows_border_top}+{self.rows_border_top}".join(col)
+            border_full = f"{self.rows_border_top}{columns_walls}{self.rows_border_top}"
             return border_full
 
 
@@ -215,6 +213,8 @@ if __name__ == "__main__":
         ),
         headers=["Badger", "Racoon", "Pig"],
         headers_centered=True,
-        table_width=38,
+        rows_centered=True,
         # show_index=False,
+        table_width=38,
+
     ).table
