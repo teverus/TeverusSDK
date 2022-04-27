@@ -5,43 +5,45 @@
 # noinspection PyAttributeOutsideInit
 class Table:
     def __init__(
-            self,
-            rows: list,
-            rows_centered: bool = False,
-            rows_border_top: str = "-",
-            rows_bottom_border: str = "-",
-
-            headers: list = (),
-            headers_centered: bool = False,
-            headers_top_border: str = "-",
-            headers_upper: bool = False,
-
-            table_width: int = None,
-            show_index: bool = True,
-
+        self,
+        rows: list,
+        rows_centered: bool = False,
+        border_rows_top: str = "-",
+        border_rows_bottom: str = "-",
+        headers: list = (),
+        headers_centered: bool = False,
+        headers_upper: bool = False,
+        border_headers_top: str = "-",
+        table_width: int = None,
+        show_index: bool = True,
+        column_border: str = "|",
     ):
         """
         * default_alignment can be "left" or "right"
         * if center is True, default_alignment isn't applied
         """
 
+        if table_width is None:
+            raise Exception("\n[ERROR] You MUST specify table_width!")
+
         # === Given values
         # Rows
         self.rows = rows if isinstance(rows, list) else [rows]
         self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
         self.rows_centered = rows_centered
-        self.rows_border_top = rows_border_top
-        self.rows_border_bottom = rows_bottom_border
+        self.rows_border_top = border_rows_top
+        self.rows_border_bottom = border_rows_bottom
 
         # Headers
         self.headers = [headers]
         self.headers_centered = headers_centered
-        self.headers_top_border = headers_top_border
+        self.headers_top_border = border_headers_top
         self.headers_upper = headers_upper
 
         # Table
         self.width_total = table_width
         self.show_index = show_index
+        self.column_wall = column_border
 
         # === Calculated values
         self.walls = 0
@@ -134,13 +136,13 @@ class Table:
                 alignment = self.headers_centered if is_header else self.rows_centered
                 align = column.center if alignment else column.ljust
 
-                row[index_col] = align(target_width, "*")
+                row[index_col] = align(target_width, " ")
                 if is_header and self.headers_upper:
                     row[index_col] = row[index_col].upper()
 
             # TODO возможность задавать wall
-            index = f" {str(index_row + 1).rjust(self.width_index)} |"
-            rows = f" {' | '.join(row)} "
+            index = f" {str(index_row + 1).rjust(self.width_index)} {self.column_wall}"
+            rows = f" {f' {self.column_wall} '.join(row)} "
 
             if [row] == self.headers:
                 if row:
@@ -160,9 +162,14 @@ class Table:
             print(headers_top)
             print(headers)
             [self.table.append(element) for element in [headers_top, headers]]
-        print(table_top)
+
+        if self.rows_border_top != " ":
+            print(table_top)
+
         [print(row) for row in self.rows]
-        print(table_bottom)
+
+        if self.rows_border_bottom != " ":
+            print(table_bottom)
 
         [self.table.append(e) for e in [table_top, *self.rows, table_bottom]]
 
@@ -200,24 +207,35 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    aaa = Table(
-        rows=data(
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            # [1, 1, 1],
-        ),
-        headers=["Badger", "Racoon", "Pig"],
-        headers_centered=True,
-        headers_upper=True,
-        rows_centered=True,
-        # show_index=False,
-        table_width=38,
-
-    ).table
+    # aaa = Table(
+    #     rows=data(
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         [1, 1, 1],
+    #         # [1, 1, 1],
+    #     ),
+    #     headers=["Badger", "Racoon", "Pig"],
+    #     headers_centered=True,
+    #     headers_upper=True,
+    #     rows_centered=True,
+    #     # show_index=False,
+    #     table_width=38,
+    #     border_headers_top="=",
+    #     border_rows_bottom="=",
+    #     column_border=" "
+    #
+    # ).table
+    Table(
+        rows=[["Command 1", "Done"]],
+        table_width=26,
+        column_border=" ",
+        show_index=False,
+        border_rows_top=" ",
+        border_rows_bottom=" ",
+    )
