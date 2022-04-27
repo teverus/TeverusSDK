@@ -173,7 +173,7 @@ class Table:
             if self.show_index:
                 all_but_index = [v for k, v in self.widths_max.items() if k != -1]
                 widths = [f"{self.rows_border_top * w}" for w in all_but_index]
-                col = ["-"] + widths
+                col = ["-" * len(str(len(self.rows)))] + widths
             else:
                 col = [f"{self.rows_border_top * w}" for w in self.widths_max.values()]
             columns_walls = f"{self.rows_border_top}+{self.rows_border_top}".join(col)
