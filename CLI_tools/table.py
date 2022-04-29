@@ -7,6 +7,7 @@ class Table:
     def __init__(
         self,
         rows: list,
+        table_width: int = 0,
         rows_centered: bool = False,
         border_rows_top: str = "-",
         border_rows_bottom: str = "-",
@@ -14,18 +15,10 @@ class Table:
         headers_centered: bool = False,
         headers_upper: bool = False,
         border_headers_top: str = "-",
-        table_width: int = None,
+
         show_index: bool = True,
         column_border: str = "|",
     ):
-        """
-        * default_alignment can be "left" or "right"
-        * if center is True, default_alignment isn't applied
-        """
-
-        if table_width is None:
-            raise Exception("\n[ERROR] You MUST specify table_width!")
-
         # === Given values
         # Rows
         self.rows = rows if isinstance(rows, list) else [rows]
@@ -88,29 +81,31 @@ class Table:
 
         self.extra = self.walls + self.inner_padding
         self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
+        if not self.width_total:
+            self.width_total = self.width_to_be_covered
 
     def calculate_paddings(self):
         if self.width_to_be_covered > self.width_total:
             while self.width_to_be_covered != self.width_total:
-                self.adjust_widths(maximum=True)
+                self.adjust_widths(decrease=True)
 
         elif self.width_to_be_covered < self.width_total:
             while self.width_to_be_covered != self.width_total:
-                self.adjust_widths(minimum=True)
+                self.adjust_widths(increase=True)
 
-    def adjust_widths(self, minimum=False, maximum=False):
-        if minimum:
+    def adjust_widths(self, increase=False, decrease=False):
+        if increase:
             value = min([v for k, v in self.widths_max.items() if k != -1])
-        elif maximum:
+        elif decrease:
             value = max(self.widths_max.values())
         else:
             raise Exception("[ERROR] You must choose either minimum or maximum")
 
         index = max([k for k, v in self.widths_max.items() if k != -1 and v == value])
 
-        if minimum:
+        if increase:
             self.widths_max[index] += 1
-        elif maximum:
+        elif decrease:
             self.widths_max[index] -= 1
         else:
             raise Exception("[ERROR] You must choose either minimum or maximum")
@@ -207,35 +202,27 @@ def data(*args):
 
 
 if __name__ == "__main__":
-    # aaa = Table(
-    #     rows=data(
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         [1, 1, 1],
-    #         # [1, 1, 1],
-    #     ),
-    #     headers=["Badger", "Racoon", "Pig"],
-    #     headers_centered=True,
-    #     headers_upper=True,
-    #     rows_centered=True,
-    #     # show_index=False,
-    #     table_width=38,
-    #     border_headers_top="=",
-    #     border_rows_bottom="=",
-    #     column_border=" "
-    #
-    # ).table
-    Table(
-        rows=[["Command 1", "Done"]],
-        table_width=26,
-        column_border=" ",
-        show_index=False,
-        border_rows_top=" ",
-        border_rows_bottom=" ",
-    )
+    aaa = Table(
+        rows=data(
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1],
+            # [1, 1, 1],
+        ),
+        headers=["Badger", "Racoon", "Pig"],
+        headers_centered=True,
+        headers_upper=True,
+        rows_centered=True,
+        # show_index=False,
+        # table_width=27,
+        border_headers_top="=",
+        border_rows_bottom="=",
+        # column_border=" "
+
+    ).table
