@@ -1,5 +1,6 @@
 """
-Подставлять пустое значение, если нет
+Менять индекс для конкретной строчки
+Возвращать все важные данные по таблице
 """
 
 
@@ -23,8 +24,7 @@ class Table:
     ):
         # === Given values
         # Rows
-        self.rows = rows if isinstance(rows, list) else [rows]
-        self.rows = [e if isinstance(e, list) else [e] for e in self.rows]
+        self.rows = self.convert_rows(rows)
         self.rows_centered = rows_centered
         self.rows_border_top = border_rows_top
         self.rows_border_bottom = border_rows_bottom
@@ -62,6 +62,19 @@ class Table:
 
         # === Printing the table
         self.print_the_table()
+
+    @staticmethod
+    def convert_rows(rows):
+        converted_rows = [e if isinstance(e, list) else [e] for e in rows]
+
+        max_columns_number = max([len(element) for element in converted_rows])
+        for row in converted_rows:
+            diff = max_columns_number - len(row)
+            if diff:
+                for _ in range(diff):
+                    row.append("")
+
+        return converted_rows
 
     def force_string_type_on_the_data(self):
         for row in self.rows:
