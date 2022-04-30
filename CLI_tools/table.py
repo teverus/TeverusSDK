@@ -1,10 +1,3 @@
-"""
-"""
-
-import os
-import sys
-
-# noinspection PyAttributeOutsideInit
 class Table:
     def __init__(
         self,
@@ -137,7 +130,6 @@ class Table:
                 if is_header and self.headers_upper:
                     row[index_col] = row[index_col].upper()
 
-            # TODO возможность задавать wall
             index = f" {str(index_row + 1).rjust(self.width_index)} {self.column_wall}"
             rows = f" {f' {self.column_wall} '.join(row)} "
 
