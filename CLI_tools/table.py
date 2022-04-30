@@ -1,6 +1,8 @@
 """
 """
 
+import os
+import sys
 
 # noinspection PyAttributeOutsideInit
 class Table:
@@ -181,48 +183,3 @@ class Table:
             columns_walls = f"{self.rows_border_top}+{self.rows_border_top}".join(col)
             border_full = f"{self.rows_border_top}{columns_walls}{self.rows_border_top}"
             return border_full
-
-
-# TODO remove
-def data(*args):
-    columns = []
-    for arg in args:
-        arg = [arg] if not isinstance(arg, list) else arg
-
-        column = []
-        for element in arg:
-            string = ""
-            for num in range(element):
-                number = num + 1 if num < 9 else num - 9
-                string = f"{string}{str(number)}"
-            column.append(string)
-        columns.append(column)
-
-    return columns
-
-
-if __name__ == "__main__":
-    aaa = Table(
-        rows=data(
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            [1, 1, 1],
-            # [1, 1, 1],
-        ),
-        headers=["Badger", "Racoon", "Pig"],
-        headers_centered=True,
-        headers_upper=True,
-        rows_centered=True,
-        # show_index=False,
-        # table_width=27,
-        border_headers_top="=",
-        border_rows_bottom="=",
-        # column_border=" "
-
-    ).table
