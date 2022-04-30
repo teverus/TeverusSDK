@@ -1,20 +1,23 @@
 """
-Название таблицы
 Подставлять пустое значение, если нет
 """
+
+
 class Table:
     def __init__(
         self,
         rows: list,
-        table_width: int = 0,
         rows_centered: bool = False,
-        border_rows_top: str = "-",
-        border_rows_bottom: str = "-",
         headers: list = (),
         headers_centered: bool = False,
         headers_upper: bool = False,
         border_headers_top: str = "-",
-
+        border_rows_top: str = "-",
+        border_rows_bottom: str = "-",
+        table_width: int = 0,
+        table_title: str = "",
+        table_title_upper: bool = True,
+        table_title_centered: bool = True,
         show_index: bool = True,
         column_border: str = "|",
     ):
@@ -33,6 +36,9 @@ class Table:
         self.headers_upper = headers_upper
 
         # Table
+        self.table_title = table_title
+        self.table_title_upper = table_title_upper
+        self.table_title_centered = table_title_centered
         self.width_total = table_width
         self.show_index = show_index
         self.column_wall = column_border
@@ -150,6 +156,13 @@ class Table:
         headers_top = self.headers_top_border * self.width_total if headers else ""
         table_top = self.get_table_top()
         table_bottom = self.rows_border_bottom * self.width_total
+
+        if self.table_title:
+            print(headers_top)
+            tt = self.table_title
+            tt = tt.upper() if self.table_title_upper else tt
+            tt = tt.center(self.width_total) if self.table_title_centered else tt
+            print(tt)
 
         if headers:
             print(headers_top)
