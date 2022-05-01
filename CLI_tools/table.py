@@ -1,5 +1,4 @@
 """
-Менять индекс для конкретной строчки
 Возвращать все важные данные по таблице
 """
 
@@ -21,6 +20,7 @@ class Table:
         table_title_centered: bool = True,
         show_index: bool = True,
         column_border: str = "|",
+        custom_index: dict = None,
     ):
         # === Given values
         # Rows
@@ -42,6 +42,7 @@ class Table:
         self.width_total = table_width
         self.show_index = show_index
         self.column_wall = column_border
+        self.custom_index = custom_index
 
         # === Calculated values
         self.walls = 0
@@ -153,7 +154,12 @@ class Table:
                 if is_header and self.headers_upper:
                     row[index_col] = row[index_col].upper()
 
-            index = f" {str(index_row + 1).rjust(self.width_index)} {self.column_wall}"
+            if self.custom_index and row[0].strip() in self.custom_index.keys():
+                proper_index = str(self.custom_index[row[0].strip()])
+            else:
+                proper_index = str(index_row + 1)
+            index = f" {proper_index.rjust(self.width_index)} {self.column_wall}"
+
             rows = f" {f' {self.column_wall} '.join(row)} "
 
             if [row] == self.headers:
