@@ -47,7 +47,7 @@ class Table:
         self.widths_max = {}
         self.width_to_be_covered = 0
         self.widths_target = 0
-        self.width_index = len(str(len(self.rows)))
+        self.width_index = self.get_proper_index_column_width()
 
         self.table = []
 
@@ -59,6 +59,13 @@ class Table:
 
         # === Printing the table
         self.print_the_table()
+
+    def get_proper_index_column_width(self):
+        indices = [
+            max([len(str(i)) for i in self.custom_index.values()]),  # max custom index
+            len(str(len(self.rows))),  # max ordinary index
+        ]
+        return max(indices)
 
     @staticmethod
     def convert_rows(rows):
@@ -203,7 +210,7 @@ class Table:
             if self.show_index:
                 all_but_index = [v for k, v in self.widths_max.items() if k != -1]
                 widths = [f"{self.rows_border_top * w}" for w in all_but_index]
-                col = ["-" * len(str(len(self.rows)))] + widths
+                col = ["-" * self.width_index] + widths
             else:
                 col = [f"{self.rows_border_top * w}" for w in self.widths_max.values()]
             columns_walls = f"{self.rows_border_top}+{self.rows_border_top}".join(col)
