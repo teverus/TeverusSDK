@@ -61,10 +61,11 @@ class Table:
         self.print_the_table()
 
     def get_proper_index_column_width(self):
-        indices = [
-            max([len(str(i)) for i in self.custom_index.values()]),  # max custom index
-            len(str(len(self.rows))),  # max ordinary index
-        ]
+        indices = [len(str(len(self.rows)))]
+
+        if self.custom_index:
+            indices.append(max([len(str(i)) for i in self.custom_index.values()]))
+
         return max(indices)
 
     @staticmethod
@@ -182,16 +183,19 @@ class Table:
         table_bottom = self.rows_border_bottom * self.width_total
 
         if self.table_title:
-            print(headers_top)
+            if self.headers_top_border:
+                print(headers_top)
             tt = self.table_title
             tt = tt.upper() if self.table_title_upper else tt
             tt = tt.center(self.width_total) if self.table_title_centered else tt
             print(tt)
 
         if headers:
-            print(headers_top)
+            if self.headers_top_border:
+                print(headers_top)
             print(headers)
-            [self.table.append(element) for element in [headers_top, headers]]
+            head_list = [headers_top, headers] if self.headers_top_border else [headers]
+            [self.table.append(element) for element in head_list]
 
         if self.rows_border_top != " ":
             print(table_top)
