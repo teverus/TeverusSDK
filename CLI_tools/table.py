@@ -220,39 +220,3 @@ class Table:
             columns_walls = f"{self.rows_border_top}+{self.rows_border_top}".join(col)
             border_full = f"{self.rows_border_top}{columns_walls}{self.rows_border_top}"
             return border_full
-
-
-def create_a_table(
-    rows: list,
-    rows_centered: bool = False,
-    headers: list = (),
-    headers_centered: bool = False,
-    headers_upper: bool = False,
-    border_headers_top: str = "-",
-    border_rows_top: str = "-",
-    border_rows_bottom: str = "-",
-    table_width: int = 0,
-    table_title: str = "",
-    table_title_upper: bool = True,
-    table_title_centered: bool = True,
-    show_index: bool = True,
-    column_border: str = "|",
-    custom_index: dict = None,
-):
-    return Table(
-        rows,
-        rows_centered,
-        headers,
-        headers_centered,
-        headers_upper,
-        border_headers_top,
-        border_rows_top,
-        border_rows_bottom,
-        table_width,
-        table_title,
-        table_title_upper,
-        table_title_centered,
-        show_index,
-        column_border,
-        custom_index,
-    ).available_options
