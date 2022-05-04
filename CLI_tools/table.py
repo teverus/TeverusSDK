@@ -197,12 +197,12 @@ class Table:
             head_list = [headers_top, headers] if self.headers_top_border else [headers]
             [self.table.append(element) for element in head_list]
 
-        if self.rows_border_top != " ":
+        if self.rows_border_top:
             print(table_top)
 
         [print(row) for row in self.rows]
 
-        if self.rows_border_bottom != " ":
+        if self.rows_border_bottom:
             print(table_bottom)
 
         [self.table.append(e) for e in [table_top, *self.rows, table_bottom]]
