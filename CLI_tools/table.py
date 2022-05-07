@@ -16,6 +16,7 @@ class Table:
         show_index: bool = True,
         column_border: str = "|",
         custom_index: dict = None,
+        index_column_width: dict = None
     ):
         # === Given values
         # Rows
@@ -47,7 +48,7 @@ class Table:
         self.widths_max = {}
         self.width_to_be_covered = 0
         self.widths_target = 0
-        self.width_index = self.get_proper_index_column_width()
+        self.width_index = self.get_proper_index_column_width(index_column_width)
 
         self.table = []
 
@@ -60,11 +61,14 @@ class Table:
         # === Printing the table
         self.print_the_table()
 
-    def get_proper_index_column_width(self):
+    def get_proper_index_column_width(self, index_column_width):
         indices = [len(str(len(self.rows)))]
 
         if self.custom_index:
             indices.append(max([len(str(i)) for i in self.custom_index.values()]))
+
+        if index_column_width:
+            indices.append(index_column_width)
 
         return max(indices)
 
@@ -151,8 +155,8 @@ class Table:
                     column = f"{head}~{tail}"
 
                 is_header = [row] == self.headers
-                alignment = self.headers_centered if is_header else self.rows_centered
-                align = column.center if alignment else column.ljust
+                centered = self.headers_centered if is_header else self.rows_centered
+                align = column.center if centered else column.ljust
 
                 row[index_col] = align(target_width, " ")
                 if is_header and self.headers_upper:
