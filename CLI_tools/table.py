@@ -4,43 +4,51 @@ from typing import Union
 class Table:
     def __init__(
         self,
+        # Rows
         rows: list,
         rows_centered: bool = False,
+        rows_border_top: str = "-",
+        rows_border_bottom: str = "-",
+        # Headers
         headers: list = (),
         headers_centered: bool = False,
         headers_upper: bool = False,
-        border_headers_top: Union[str, bool] = "-",
-        border_rows_top: str = "-",
-        border_rows_bottom: str = "-",
-        table_width: int = 0,
+        headers_border_top: Union[str, bool] = "-",
+        # Table title
         table_title: str = "",
-        table_title_upper: bool = True,
         table_title_centered: bool = True,
+        table_title_upper: bool = True,
+        table_title_border_top: str = "-",
+        # Table
+        table_width: int = 0,
         show_index: bool = True,
-        column_border: str = "|",
+        column_separator: str = "|",
         custom_index: dict = None,
-        index_column_width: Union[dict, int] = None
+        index_column_width: Union[dict, int] = None,
     ):
         # === Given values
         # Rows
         self.rows = self.convert_rows(rows)
         self.rows_centered = rows_centered
-        self.rows_border_top = border_rows_top
-        self.rows_border_bottom = border_rows_bottom
+        self.rows_border_top = rows_border_top
+        self.rows_border_bottom = rows_border_bottom
 
         # Headers
         self.headers = [headers]
         self.headers_centered = headers_centered
-        self.headers_top_border = border_headers_top
         self.headers_upper = headers_upper
+        self.headers_border_top = headers_border_top
+
+        # Table title
+        self.table_title = table_title
+        self.table_title_centered = table_title_centered
+        self.table_title_upper = table_title_upper
+        self.table_title_border_top = table_title_border_top
 
         # Table
-        self.table_title = table_title
-        self.table_title_upper = table_title_upper
-        self.table_title_centered = table_title_centered
-        self.width_total = table_width
+        self.table_width = table_width
         self.show_index = show_index
-        self.column_wall = column_border
+        self.column_separator = column_separator
         self.custom_index = custom_index
         self.available_options = []
 
@@ -111,16 +119,16 @@ class Table:
 
         self.extra = self.walls + self.inner_padding
         self.width_to_be_covered = sum(self.widths_max.values()) + self.extra
-        if not self.width_total:
-            self.width_total = self.width_to_be_covered
+        if not self.table_width:
+            self.table_width = self.width_to_be_covered
 
     def calculate_paddings(self):
-        if self.width_to_be_covered > self.width_total:
-            while self.width_to_be_covered != self.width_total:
+        if self.width_to_be_covered > self.table_width:
+            while self.width_to_be_covered != self.table_width:
                 self.adjust_widths(decrease=True)
 
-        elif self.width_to_be_covered < self.width_total:
-            while self.width_to_be_covered != self.width_total:
+        elif self.width_to_be_covered < self.table_width:
+            while self.width_to_be_covered != self.table_width:
                 self.adjust_widths(increase=True)
 
     def adjust_widths(self, increase=False, decrease=False):
@@ -169,11 +177,11 @@ class Table:
                 proper_index = str(self.custom_index[row[0].strip()])
             else:
                 proper_index = str(index_row + 1)
-            index = f" {proper_index.rjust(self.width_index)} {self.column_wall}"
+            index = f" {proper_index.rjust(self.width_index)} {self.column_separator}"
             if [row] != self.headers:
                 self.available_options.append(proper_index)
 
-            rows = f" {f' {self.column_wall} '.join(row)} "
+            rows = f" {f' {self.column_separator} '.join(row)} "
 
             if [row] == self.headers:
                 if row:
@@ -185,23 +193,23 @@ class Table:
 
     def print_the_table(self):
         headers = self.headers[0]
-        headers_top = self.headers_top_border * self.width_total if headers else ""
+        headers_top = self.headers_border_top * self.table_width if headers else ""
         table_top = self.get_table_top()
-        table_bottom = self.rows_border_bottom * self.width_total
+        table_bottom = self.rows_border_bottom * self.table_width
 
         if self.table_title:
-            if self.headers_top_border:
-                print(headers_top)
+            if self.table_title_border_top:
+                print(self.table_title_border_top * self.table_width)
             tt = self.table_title
             tt = tt.upper() if self.table_title_upper else tt
-            tt = tt.center(self.width_total) if self.table_title_centered else tt
+            tt = tt.center(self.table_width) if self.table_title_centered else tt
             print(tt)
 
         if headers:
-            if self.headers_top_border:
+            if self.headers_border_top:
                 print(headers_top)
             print(headers)
-            head_list = [headers_top, headers] if self.headers_top_border else [headers]
+            head_list = [headers_top, headers] if self.headers_border_top else [headers]
             [self.table.append(element) for element in head_list]
 
         if self.rows_border_top:
@@ -216,7 +224,7 @@ class Table:
 
     def get_table_top(self):
         if self.headers == [()]:
-            return self.rows_border_top * self.width_total
+            return self.rows_border_top * self.table_width
         else:
             if self.show_index:
                 all_but_index = [v for k, v in self.widths_max.items() if k != -1]
