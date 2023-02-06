@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="789becae-4194-4168-9885-380cbf5574b6" name="Changes" comment="[Done] 133 -&gt; 137">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="improved_logs" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BeqZICT7AuSNNnyEUE9Y6SdjEj" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Git.Branch.Popup.ShowAllLocals&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;Project Files&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/teverus/PythonProjects/Metal_Tracker_Notifications&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
+  }
+}</component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="CURA-312" />
+      <force-push-target remote-path="origin" branch="new_results_table" />
+      <force-push-target remote-path="origin" branch="headers" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\teverus\PythonProjects\Finnish_Learner" />
+      <recent name="C:\teverus\PythonProjects\Finnish_Learner\Files" />
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code" />
+      <recent name="C:\teverus\PythonProjects\chameleon-tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\Screens\old" />
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\TeverusSDK\old" />
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\TeverusSDK" />
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\modules" />
+      <recent name="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\functions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="UpdateGames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Game_Releases_Tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/modules/UpdateGames.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateGames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Game_Releases_Tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\teverus\PythonProjects\Game_Releases_Tracker\Code\modules\UpdateGames.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Finnish_Learner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Game_Releases_Tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\teverus\PythonProjects\Game_Releases_Tracker\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Code.Modules.UpdateGames" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Game_Releases_Tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Code.Modules.UpdateGames&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for Tests.API.REST.test_claims_claimid_withholdings.TestClaimsClaimIdWithholdings.test_claims_claimid_withholdings_smoke" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="chameleon-tests" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Tests.API.REST.test_claims_claimid_withholdings.TestClaimsClaimIdWithholdings.test_claims_claimid_withholdings_smoke&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in C:/teverus/PythonProjects/Finnish_Learner/Code/Modules/UpdateGames.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Game_Releases_Tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Code/Modules/UpdateGames.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="===[ REST ]===" type="tests" factoryName="Autodetect">
+      <module name="chameleon-tests" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Tests/API/REST&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.UpdateGames" />
+      <item itemvalue="Python tests.Python tests for Tests.API.REST.test_claims_claimid_withholdings.TestClaimsClaimIdWithholdings.test_claims_claimid_withholdings_smoke" />
+      <item itemvalue="Python tests.===[ REST ]===" />
+      <item itemvalue="Python tests.Python tests in C:/teverus/PythonProjects/Finnish_Learner/Code/Modules/UpdateGames.py" />
+      <item itemvalue="Python tests.Python tests for Code.Modules.UpdateGames" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.UpdateGames" />
+        <item itemvalue="Python.UpdateGames" />
+        <item itemvalue="Python tests.Python tests in C:/teverus/PythonProjects/Finnish_Learner/Code/Modules/UpdateGames.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="789becae-4194-4168-9885-380cbf5574b6" name="Changes" comment="" />
+      <created>1657276953539</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657276953539</updated>
+      <workItem from="1657276961333" duration="41000" />
+      <workItem from="1657278873568" duration="26000" />
+      <workItem from="1657278915056" duration="23000" />
+      <workItem from="1657278985941" duration="112000" />
+      <workItem from="1657279169613" duration="21000" />
+      <workItem from="1657282682376" duration="688000" />
+      <workItem from="1657288723859" duration="72000" />
+      <workItem from="1657288803020" duration="14000" />
+      <workItem from="1657288824334" duration="25000" />
+      <workItem from="1657288856428" duration="370000" />
+      <workItem from="1657289239396" duration="41000" />
+      <workItem from="1657289715743" duration="597000" />
+      <workItem from="1657362962860" duration="519000" />
+      <workItem from="1657364126805" duration="77000" />
+      <workItem from="1657364258673" duration="109000" />
+      <workItem from="1657364377815" duration="322000" />
+      <workItem from="1657364712099" duration="510000" />
+      <workItem from="1657365237138" duration="1117000" />
+      <workItem from="1657366565639" duration="35000" />
+      <workItem from="1657366651135" duration="107000" />
+      <workItem from="1657366805957" duration="101000" />
+      <workItem from="1657366915090" duration="372000" />
+      <workItem from="1657367614030" duration="90000" />
+      <workItem from="1657424307041" duration="29000" />
+      <workItem from="1657425431632" duration="62000" />
+      <workItem from="1657425513415" duration="10958000" />
+      <workItem from="1657469751446" duration="139000" />
+      <workItem from="1657512563421" duration="53000" />
+      <workItem from="1657512674227" duration="3768000" />
+      <workItem from="1657534528154" duration="4183000" />
+      <workItem from="1657538773056" duration="4262000" />
+      <workItem from="1657544441678" duration="2511000" />
+      <workItem from="1657599212677" duration="1747000" />
+      <workItem from="1657600990880" duration="1455000" />
+      <workItem from="1657602870699" duration="2000" />
+      <workItem from="1657610791517" duration="23000" />
+      <workItem from="1657612172794" duration="18000" />
+      <workItem from="1657622211637" duration="90000" />
+      <workItem from="1657622327660" duration="955000" />
+      <workItem from="1657623306386" duration="6564000" />
+      <workItem from="1657631165280" duration="2988000" />
+      <workItem from="1657638019617" duration="415000" />
+      <workItem from="1657685757270" duration="47000" />
+      <workItem from="1657697837395" duration="947000" />
+      <workItem from="1657699034149" duration="698000" />
+      <workItem from="1657705786761" duration="5214000" />
+      <workItem from="1657719299731" duration="84000" />
+      <workItem from="1657719398807" duration="3584000" />
+      <workItem from="1657725254600" duration="130000" />
+      <workItem from="1657725400231" duration="26000" />
+      <workItem from="1657725509128" duration="43000" />
+      <workItem from="1657725577474" duration="359000" />
+      <workItem from="1657726373438" duration="362000" />
+      <workItem from="1657728026783" duration="157000" />
+      <workItem from="1657771734072" duration="68000" />
+      <workItem from="1657784103341" duration="4104000" />
+      <workItem from="1657858090747" duration="7000" />
+      <workItem from="1657870629733" duration="2774000" />
+      <workItem from="1657873866739" duration="34000" />
+      <workItem from="1657874364239" duration="6664000" />
+      <workItem from="1657882997623" duration="5694000" />
+      <workItem from="1657895320365" duration="890000" />
+      <workItem from="1657971602687" duration="8000" />
+      <workItem from="1658129578134" duration="2051000" />
+      <workItem from="1658138234878" duration="4127000" />
+      <workItem from="1658205647984" duration="31000" />
+      <workItem from="1658225192173" duration="8827000" />
+      <workItem from="1658305756332" duration="6505000" />
+      <workItem from="1658376611411" duration="23000" />
+      <workItem from="1658389385785" duration="1380000" />
+      <workItem from="1658463686418" duration="8000" />
+      <workItem from="1658906814900" duration="1684000" />
+      <workItem from="1658920881962" duration="5000" />
+      <workItem from="1659345031345" duration="33000" />
+      <workItem from="1659348161999" duration="15476000" />
+      <workItem from="1659412934265" duration="7775000" />
+      <workItem from="1659423008167" duration="3715000" />
+      <workItem from="1659500209712" duration="29000" />
+      <workItem from="1659511039125" duration="8241000" />
+      <workItem from="1659519472356" duration="1834000" />
+      <workItem from="1659525609987" duration="2987000" />
+      <workItem from="1659586441566" duration="8000" />
+      <workItem from="1659598534619" duration="8577000" />
+      <workItem from="1659608734786" duration="161000" />
+      <workItem from="1659608967972" duration="5668000" />
+      <workItem from="1659671939675" duration="36000" />
+      <workItem from="1659684189278" duration="4905000" />
+      <workItem from="1659759519377" duration="56000" />
+      <workItem from="1659773406216" duration="3651000" />
+      <workItem from="1659797356614" duration="5000" />
+      <workItem from="1659943857858" duration="1411000" />
+      <workItem from="1659945302359" duration="140000" />
+      <workItem from="1659945454942" duration="2587000" />
+      <workItem from="1659959833824" duration="6767000" />
+      <workItem from="1660018425915" duration="7000" />
+      <workItem from="1660030247650" duration="6951000" />
+      <workItem from="1660117849235" duration="8805000" />
+      <workItem from="1660137269968" duration="884000" />
+      <workItem from="1660190984990" duration="49000" />
+      <workItem from="1660191044778" duration="57000" />
+      <workItem from="1660202411950" duration="6482000" />
+      <workItem from="1660274453143" duration="11000" />
+      <workItem from="1660282293018" duration="230000" />
+      <workItem from="1660282541925" duration="2675000" />
+      <workItem from="1660362456658" duration="22000" />
+      <workItem from="1660552746578" duration="5438000" />
+      <workItem from="1660570240650" duration="688000" />
+      <workItem from="1660571142228" duration="1199000" />
+      <workItem from="1660623368977" duration="13000" />
+      <workItem from="1660636190462" duration="8142000" />
+      <workItem from="1660708710390" duration="5000" />
+      <workItem from="1660708757274" duration="5000" />
+      <workItem from="1660720132863" duration="13635000" />
+      <workItem from="1660796032362" duration="37000" />
+      <workItem from="1660806524803" duration="4668000" />
+      <workItem from="1660882509949" duration="10000" />
+      <workItem from="1660896540547" duration="6267000" />
+      <workItem from="1660971485885" duration="6000" />
+      <workItem from="1661150752575" duration="4016000" />
+      <workItem from="1661228037124" duration="20000" />
+      <workItem from="1661239754239" duration="3326000" />
+      <workItem from="1661258190509" duration="2236000" />
+      <workItem from="1661314757112" duration="16000" />
+      <workItem from="1661325596938" duration="5374000" />
+      <workItem from="1661400612715" duration="25000" />
+      <workItem from="1661416825465" duration="16238000" />
+      <workItem from="1661487214386" duration="24000" />
+      <workItem from="1661497159540" duration="3773000" />
+      <workItem from="1661573455897" duration="11000" />
+      <workItem from="1661758730704" duration="6156000" />
+      <workItem from="1661831609294" duration="5000" />
+      <workItem from="1661836213979" duration="6494000" />
+      <workItem from="1661863138122" duration="7815000" />
+      <workItem from="1661919514026" duration="14235000" />
+      <workItem from="1661955180566" duration="1236000" />
+      <workItem from="1662004664452" duration="7000" />
+      <workItem from="1662016008493" duration="2178000" />
+      <workItem from="1662091959941" duration="45000" />
+      <workItem from="1662103734979" duration="8152000" />
+      <workItem from="1662177788298" duration="5000" />
+      <workItem from="1662184496021" duration="4093000" />
+      <workItem from="1662262198507" duration="27000" />
+      <workItem from="1662362299435" duration="11017000" />
+      <workItem from="1662380332120" duration="867000" />
+      <workItem from="1662386146141" duration="596000" />
+      <workItem from="1662435878599" duration="8481000" />
+      <workItem from="1662453188258" duration="4656000" />
+      <workItem from="1662537363461" duration="10689000" />
+      <workItem from="1662623062697" duration="8620000" />
+      <workItem from="1662709740658" duration="15606000" />
+      <workItem from="1662866839440" duration="7000" />
+      <workItem from="1662866931748" duration="26000" />
+      <workItem from="1662968878994" duration="9466000" />
+      <workItem from="1663042579147" duration="7000" />
+      <workItem from="1663052525653" duration="3387000" />
+      <workItem from="1663128984684" duration="6000" />
+      <workItem from="1663140072956" duration="3958000" />
+      <workItem from="1663151439523" duration="4000" />
+      <workItem from="1663214007081" duration="5274000" />
+      <workItem from="1663248827104" duration="1908000" />
+      <workItem from="1663301871782" duration="8000" />
+      <workItem from="1663307259503" duration="1773000" />
+      <workItem from="1663338506838" duration="665000" />
+      <workItem from="1663386013043" duration="661000" />
+      <workItem from="1663386689984" duration="4000" />
+      <workItem from="1663573347829" duration="8339000" />
+      <workItem from="1663646368986" duration="7000" />
+      <workItem from="1663659391937" duration="4896000" />
+      <workItem from="1663664473611" duration="5779000" />
+      <workItem from="1663672580843" duration="639000" />
+      <workItem from="1663734017838" duration="7000" />
+      <workItem from="1663749686699" duration="8777000" />
+      <workItem from="1663818910718" duration="7000" />
+      <workItem from="1663830891495" duration="5681000" />
+      <workItem from="1663995328949" duration="122000" />
+      <workItem from="1663996381052" duration="214000" />
+      <workItem from="1664079284753" duration="40000" />
+      <workItem from="1664179322431" duration="2032000" />
+      <workItem from="1664181412051" duration="45000" />
+      <workItem from="1664181467754" duration="388000" />
+      <workItem from="1664181870671" duration="8167000" />
+      <workItem from="1664198406818" duration="641000" />
+      <workItem from="1664252027959" duration="8000" />
+      <workItem from="1664253390057" duration="3508000" />
+      <workItem from="1664264214874" duration="3498000" />
+      <workItem from="1664267759558" duration="9345000" />
+      <workItem from="1664279570207" duration="3868000" />
+      <workItem from="1664338509995" duration="86000" />
+      <workItem from="1664338746133" duration="123000" />
+      <workItem from="1664339028402" duration="2645000" />
+      <workItem from="1664352069534" duration="4194000" />
+      <workItem from="1664360260254" duration="1755000" />
+      <workItem from="1664436705395" duration="5995000" />
+      <workItem from="1664511154042" duration="7000" />
+      <workItem from="1664512637101" duration="22000" />
+      <workItem from="1664513705680" duration="14000" />
+      <workItem from="1664521850600" duration="46000" />
+      <workItem from="1664521905704" duration="19834000" />
+      <workItem from="1664597017110" duration="5296000" />
+      <workItem from="1664621542406" duration="652000" />
+      <workItem from="1664681067618" duration="19261000" />
+      <workItem from="1664770454368" duration="137000" />
+      <workItem from="1664770603352" duration="4818000" />
+      <workItem from="1664779152731" duration="10198000" />
+      <workItem from="1664856849601" duration="1845000" />
+      <workItem from="1664866481246" duration="6565000" />
+      <workItem from="1664954542171" duration="10544000" />
+      <workItem from="1665029759371" duration="5745000" />
+      <workItem from="1665036634309" duration="2533000" />
+      <workItem from="1665063825469" duration="1293000" />
+      <workItem from="1665115920919" duration="7256000" />
+      <workItem from="1665203274439" duration="24000" />
+      <workItem from="1665203354195" duration="1762000" />
+      <workItem from="1665205250637" duration="2142000" />
+      <workItem from="1665212496876" duration="7478000" />
+      <workItem from="1665387624136" duration="10575000" />
+      <workItem from="1665399696699" duration="2650000" />
+      <workItem from="1665461865817" duration="44000" />
+      <workItem from="1665461919015" duration="17000" />
+      <workItem from="1665471433242" duration="3461000" />
+      <workItem from="1665497574691" duration="236000" />
+      <workItem from="1665548416241" duration="23000" />
+      <workItem from="1665560988854" duration="7190000" />
+      <workItem from="1665634403132" duration="9000" />
+      <workItem from="1665646743627" duration="7401000" />
+      <workItem from="1665674542514" duration="12000" />
+      <workItem from="1665721538673" duration="25000" />
+      <workItem from="1665736421608" duration="3830000" />
+      <workItem from="1665809236307" duration="7000" />
+      <workItem from="1665981238878" duration="166000" />
+      <workItem from="1665981425312" duration="2054000" />
+      <workItem from="1665993770884" duration="33000" />
+      <workItem from="1666066330882" duration="1394000" />
+      <workItem from="1666067758045" duration="1459000" />
+      <workItem from="1666081107599" duration="7000" />
+      <workItem from="1666239797220" duration="3436000" />
+      <workItem from="1666325705545" duration="1825000" />
+      <workItem from="1666336538727" duration="5000" />
+      <workItem from="1666672199461" duration="1839000" />
+      <workItem from="1666674637740" duration="4000" />
+      <workItem from="1666758333450" duration="1682000" />
+      <workItem from="1666845211897" duration="1596000" />
+      <workItem from="1666931365866" duration="3525000" />
+      <workItem from="1667016979550" duration="2921000" />
+      <workItem from="1667102815519" duration="9538000" />
+      <workItem from="1667189009591" duration="416000" />
+      <workItem from="1667189584184" duration="3811000" />
+      <workItem from="1667195303568" duration="25000" />
+      <workItem from="1667274586461" duration="2683000" />
+      <workItem from="1667280028405" duration="29000" />
+      <workItem from="1667361379227" duration="289000" />
+      <workItem from="1667362706498" duration="2254000" />
+      <workItem from="1667446210029" duration="5615000" />
+      <workItem from="1667532522489" duration="6115000" />
+      <workItem from="1667620248760" duration="4811000" />
+      <workItem from="1667660961040" duration="73000" />
+      <workItem from="1667705528490" duration="5655000" />
+      <workItem from="1667792965147" duration="4776000" />
+      <workItem from="1667879854405" duration="5408000" />
+      <workItem from="1667900532727" duration="10271000" />
+      <workItem from="1667979040519" duration="61000" />
+      <workItem from="1668052597883" duration="3663000" />
+      <workItem from="1668059544884" duration="50000" />
+      <workItem from="1668137487025" duration="4467000" />
+      <workItem from="1668145256503" duration="11000" />
+      <workItem from="1668223703241" duration="6311000" />
+      <workItem from="1668310855021" duration="6063000" />
+      <workItem from="1668396363156" duration="5193000" />
+      <workItem from="1668406308626" duration="16000" />
+      <workItem from="1668482992489" duration="4415000" />
+      <workItem from="1668489799477" duration="60000" />
+      <workItem from="1668570132459" duration="4889000" />
+      <workItem from="1668656955734" duration="4374000" />
+      <workItem from="1668663423665" duration="8000" />
+      <workItem from="1668743018929" duration="4809000" />
+      <workItem from="1668829576953" duration="4457000" />
+      <workItem from="1668871449604" duration="1757000" />
+      <workItem from="1668914763678" duration="183000" />
+      <workItem from="1668915064625" duration="50000" />
+      <workItem from="1668915125311" duration="222000" />
+      <workItem from="1668915362112" duration="212000" />
+      <workItem from="1668915598446" duration="55000" />
+      <workItem from="1668915664104" duration="4934000" />
+      <workItem from="1668942652768" duration="2207000" />
+      <workItem from="1668950313639" duration="3588000" />
+      <workItem from="1668953969657" duration="1001000" />
+      <workItem from="1668957278487" duration="2398000" />
+      <workItem from="1669002046462" duration="111000" />
+      <workItem from="1669004966673" duration="537000" />
+      <workItem from="1669008129488" duration="167000" />
+      <workItem from="1669008307841" duration="3410000" />
+      <workItem from="1669019998625" duration="8000" />
+      <workItem from="1669090113500" duration="3704000" />
+      <workItem from="1669096910376" duration="441000" />
+      <workItem from="1669176226455" duration="2638000" />
+      <workItem from="1669217433106" duration="3544000" />
+      <workItem from="1669261508292" duration="1913000" />
+      <workItem from="1669269516255" duration="24000" />
+      <workItem from="1669291314526" duration="3423000" />
+      <workItem from="1669348247650" duration="3512000" />
+      <workItem from="1669435139323" duration="4858000" />
+      <workItem from="1669459366739" duration="5872000" />
+      <workItem from="1669477347317" duration="2588000" />
+      <workItem from="1669520351853" duration="5880000" />
+      <workItem from="1669550829719" duration="10000" />
+      <workItem from="1669608011732" duration="480000" />
+      <workItem from="1669630134861" duration="1306000" />
+      <workItem from="1669695000189" duration="2702000" />
+      <workItem from="1669779608239" duration="2883000" />
+      <workItem from="1669788115245" duration="10000" />
+      <workItem from="1669866602306" duration="5170000" />
+      <workItem from="1669891340415" duration="2271000" />
+      <workItem from="1669952759086" duration="784000" />
+      <workItem from="1670127175397" duration="87000" />
+      <workItem from="1670128153222" duration="7000" />
+      <workItem from="1670297957049" duration="2823000" />
+      <workItem from="1670556170084" duration="4074000" />
+      <workItem from="1670565886889" duration="14000" />
+      <workItem from="1670731272592" duration="4095000" />
+      <workItem from="1670816014709" duration="339000" />
+      <workItem from="1670943918511" duration="43000" />
+      <workItem from="1670988623065" duration="348000" />
+      <workItem from="1670989420348" duration="2055000" />
+      <workItem from="1670997960413" duration="13000" />
+      <workItem from="1671076569231" duration="3809000" />
+      <workItem from="1671942348108" duration="1982000" />
+      <workItem from="1671944877406" duration="5000" />
+      <workItem from="1671945145795" duration="2835000" />
+      <workItem from="1672026769009" duration="11000" />
+      <workItem from="1672029590931" duration="1791000" />
+      <workItem from="1672034717711" duration="13000" />
+      <workItem from="1672298808690" duration="369000" />
+      <workItem from="1672306619642" duration="15000" />
+      <workItem from="1672458351985" duration="1199000" />
+      <workItem from="1672577660352" duration="5000" />
+      <workItem from="1672630907165" duration="4031000" />
+      <workItem from="1672641772602" duration="7000" />
+      <workItem from="1672717139792" duration="26000" />
+      <workItem from="1672717174524" duration="4126000" />
+      <workItem from="1672802812889" duration="6518000" />
+      <workItem from="1672889957940" duration="3264000" />
+      <workItem from="1672975426828" duration="803000" />
+      <workItem from="1672977997746" duration="1580000" />
+      <workItem from="1672986339071" duration="12000" />
+      <workItem from="1673061985461" duration="4847000" />
+      <workItem from="1673073783720" duration="5000" />
+      <workItem from="1673149352587" duration="3186000" />
+      <workItem from="1673154082001" duration="14000" />
+      <workItem from="1673164519398" duration="964000" />
+      <workItem from="1673495874648" duration="75000" />
+      <workItem from="1673495957653" duration="2816000" />
+      <workItem from="1673506932709" duration="16000" />
+      <workItem from="1673532501130" duration="50000" />
+      <workItem from="1673532956681" duration="267000" />
+      <workItem from="1673583869456" duration="2117000" />
+      <workItem from="1673586066692" duration="633000" />
+      <workItem from="1673669101885" duration="2891000" />
+      <workItem from="1673753692527" duration="850000" />
+      <workItem from="1674100698561" duration="3470000" />
+      <workItem from="1674274284175" duration="2520000" />
+      <workItem from="1674358928309" duration="339000" />
+      <workItem from="1674359278448" duration="2591000" />
+      <workItem from="1674446164723" duration="9000" />
+      <workItem from="1674448907989" duration="609000" />
+      <workItem from="1674533505057" duration="10000" />
+      <workItem from="1675484258651" duration="359000" />
+      <workItem from="1675656858150" duration="245000" />
+      <workItem from="1675657164959" duration="208000" />
+      <workItem from="1675657385541" duration="14000" />
+    </task>
+    <task id="LOCAL-00387" summary="[Done] Colors added">
+      <created>1669351078327</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1669351078328</updated>
+    </task>
+    <task id="LOCAL-00388" summary="[Done] Add time on Results screen">
+      <created>1669435486856</created>
+      <option name="number" value="00388" />
+      <option name="presentableId" value="LOCAL-00388" />
+      <option name="project" value="LOCAL" />
+      <updated>1669435486857</updated>
+    </task>
+    <task id="LOCAL-00389" summary="[WIP] ConfigTool">
+      <created>1669479800305</created>
+      <option name="number" value="00389" />
+      <option name="presentableId" value="LOCAL-00389" />
+      <option name="project" value="LOCAL" />
+      <updated>1669479800306</updated>
+    </task>
+    <task id="LOCAL-00390" summary="[Done] ConfigTool">
+      <created>1669523023117</created>
+      <option name="number" value="00390" />
+      <option name="presentableId" value="LOCAL-00390" />
+      <option name="project" value="LOCAL" />
+      <updated>1669523023117</updated>
+    </task>
+    <task id="LOCAL-00391" summary="[Done] ExitScreen">
+      <created>1669608120260</created>
+      <option name="number" value="00391" />
+      <option name="presentableId" value="LOCAL-00391" />
+      <option name="project" value="LOCAL" />
+      <updated>1669608120260</updated>
+    </task>
+    <task id="LOCAL-00392" summary="[WIP] Logs">
+      <created>1669697209073</created>
+      <option name="number" value="00392" />
+      <option name="presentableId" value="LOCAL-00392" />
+      <option name="project" value="LOCAL" />
+      <updated>1669697209074</updated>
+    </task>
+    <task id="LOCAL-00393" summary="[WIP] Logs">
+      <created>1669697640413</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1669697640414</updated>
+    </task>
+    <task id="LOCAL-00394" summary="[Done] Logs">
+      <created>1669783744576</created>
+      <option name="number" value="00394" />
+      <option name="presentableId" value="LOCAL-00394" />
+      <option name="project" value="LOCAL" />
+      <updated>1669783744576</updated>
+    </task>
+    <task id="LOCAL-00395" summary="[WIP] Logs">
+      <created>1669874657724</created>
+      <option name="number" value="00395" />
+      <option name="presentableId" value="LOCAL-00395" />
+      <option name="project" value="LOCAL" />
+      <updated>1669874657724</updated>
+    </task>
+    <task id="LOCAL-00396" summary="[Done] Logs">
+      <created>1669952897615</created>
+      <option name="number" value="00396" />
+      <option name="presentableId" value="LOCAL-00396" />
+      <option name="project" value="LOCAL" />
+      <updated>1669952897616</updated>
+    </task>
+    <task id="LOCAL-00397" summary="[Done] Proper results table">
+      <created>1670299681232</created>
+      <option name="number" value="00397" />
+      <option name="presentableId" value="LOCAL-00397" />
+      <option name="project" value="LOCAL" />
+      <updated>1670299681233</updated>
+    </task>
+    <task id="LOCAL-00398" summary="[Done] Remove word combinations stub">
+      <created>1670300799416</created>
+      <option name="number" value="00398" />
+      <option name="presentableId" value="LOCAL-00398" />
+      <option name="project" value="LOCAL" />
+      <updated>1670300799416</updated>
+    </task>
+    <task id="LOCAL-00399" summary="[Done] Logs: reversed, stun where needed">
+      <created>1670559671367</created>
+      <option name="number" value="00399" />
+      <option name="presentableId" value="LOCAL-00399" />
+      <option name="project" value="LOCAL" />
+      <updated>1670559671367</updated>
+    </task>
+    <task id="LOCAL-00400" summary="[Done] Logs: improved">
+      <created>1670734807551</created>
+      <option name="number" value="00400" />
+      <option name="presentableId" value="LOCAL-00400" />
+      <option name="project" value="LOCAL" />
+      <updated>1670734807551</updated>
+    </task>
+    <task id="LOCAL-00401" summary="[Done] Words/Phrases statistics">
+      <created>1670991425406</created>
+      <option name="number" value="00401" />
+      <option name="presentableId" value="LOCAL-00401" />
+      <option name="project" value="LOCAL" />
+      <updated>1670991425406</updated>
+    </task>
+    <task id="LOCAL-00402" summary="[Done] Char change + q to quit">
+      <created>1671077722018</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1671077722018</updated>
+    </task>
+    <task id="LOCAL-00403" summary="[WIP] Add tier and elapsed time">
+      <created>1671079156652</created>
+      <option name="number" value="00403" />
+      <option name="presentableId" value="LOCAL-00403" />
+      <option name="project" value="LOCAL" />
+      <updated>1671079156652</updated>
+    </task>
+    <task id="LOCAL-00404" summary="[Done] Add tier and time elapsed">
+      <created>1671944328717</created>
+      <option name="number" value="00404" />
+      <option name="presentableId" value="LOCAL-00404" />
+      <option name="project" value="LOCAL" />
+      <updated>1671944328717</updated>
+    </task>
+    <task id="LOCAL-00405" summary="[WIP] ConfigTool -&gt; YamlTool">
+      <created>1672299176781</created>
+      <option name="number" value="00405" />
+      <option name="presentableId" value="LOCAL-00405" />
+      <option name="project" value="LOCAL" />
+      <updated>1672299176781</updated>
+    </task>
+    <task id="LOCAL-00406" summary="[Done] ConfigTool -&gt; YamlTool">
+      <created>1672458738652</created>
+      <option name="number" value="00406" />
+      <option name="presentableId" value="LOCAL-00406" />
+      <option name="project" value="LOCAL" />
+      <updated>1672458738653</updated>
+    </task>
+    <task id="LOCAL-00407" summary="[WIP] ResultsTable 2.0">
+      <created>1672634542924</created>
+      <option name="number" value="00407" />
+      <option name="presentableId" value="LOCAL-00407" />
+      <option name="project" value="LOCAL" />
+      <updated>1672634542924</updated>
+    </task>
+    <task id="LOCAL-00408" summary="[Refactoring] Remove config.ini">
+      <created>1672634754246</created>
+      <option name="number" value="00408" />
+      <option name="presentableId" value="LOCAL-00408" />
+      <option name="project" value="LOCAL" />
+      <updated>1672634754246</updated>
+    </task>
+    <task id="LOCAL-00409" summary="[Done] New results table">
+      <created>1672824077494</created>
+      <option name="number" value="00409" />
+      <option name="presentableId" value="LOCAL-00409" />
+      <option name="project" value="LOCAL" />
+      <updated>1672824077494</updated>
+    </task>
+    <task id="LOCAL-00410" summary="[Done] New results table">
+      <created>1672825064577</created>
+      <option name="number" value="00410" />
+      <option name="presentableId" value="LOCAL-00410" />
+      <option name="project" value="LOCAL" />
+      <updated>1672825064577</updated>
+    </task>
+    <task id="LOCAL-00411" summary="[WIP] Color to result table rows">
+      <created>1672890502778</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1672890502779</updated>
+    </task>
+    <task id="LOCAL-00412" summary="[Done] Color to result table rows">
+      <created>1672892553545</created>
+      <option name="number" value="00412" />
+      <option name="presentableId" value="LOCAL-00412" />
+      <option name="project" value="LOCAL" />
+      <updated>1672892553545</updated>
+    </task>
+    <task id="LOCAL-00413" summary="[WIP] Headers, bottom line">
+      <created>1672978081937</created>
+      <option name="number" value="00413" />
+      <option name="presentableId" value="LOCAL-00413" />
+      <option name="project" value="LOCAL" />
+      <updated>1672978081937</updated>
+    </task>
+    <task id="LOCAL-00414" summary="[WIP][Headers] Record -&gt; false">
+      <created>1672978155402</created>
+      <option name="number" value="00414" />
+      <option name="presentableId" value="LOCAL-00414" />
+      <option name="project" value="LOCAL" />
+      <updated>1672978155403</updated>
+    </task>
+    <task id="LOCAL-00415" summary="[WIP][Headers] Add TODO">
+      <created>1672979570396</created>
+      <option name="number" value="00415" />
+      <option name="presentableId" value="LOCAL-00415" />
+      <option name="project" value="LOCAL" />
+      <updated>1672979570396</updated>
+    </task>
+    <task id="LOCAL-00416" summary="[Refactoring] Add .gitignore">
+      <created>1673063166859</created>
+      <option name="number" value="00416" />
+      <option name="presentableId" value="LOCAL-00416" />
+      <option name="project" value="LOCAL" />
+      <updated>1673063166860</updated>
+    </task>
+    <task id="LOCAL-00417" summary="[WIP] Adding headers">
+      <created>1673066123210</created>
+      <option name="number" value="00417" />
+      <option name="presentableId" value="LOCAL-00417" />
+      <option name="project" value="LOCAL" />
+      <updated>1673066123210</updated>
+    </task>
+    <task id="LOCAL-00418" summary="[WIP] Deleting DB files from git">
+      <created>1673066391148</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1673066391148</updated>
+    </task>
+    <task id="LOCAL-00419" summary="[WIP] Disabled legacy">
+      <created>1673066750254</created>
+      <option name="number" value="00419" />
+      <option name="presentableId" value="LOCAL-00419" />
+      <option name="project" value="LOCAL" />
+      <updated>1673066750254</updated>
+    </task>
+    <task id="LOCAL-00420" summary="[WIP] Disable legacy">
+      <created>1673066763254</created>
+      <option name="number" value="00420" />
+      <option name="presentableId" value="LOCAL-00420" />
+      <option name="project" value="LOCAL" />
+      <updated>1673066763254</updated>
+    </task>
+    <task id="LOCAL-00421" summary="[WIP] Rework column adjustment mechanism">
+      <created>1673152544945</created>
+      <option name="number" value="00421" />
+      <option name="presentableId" value="LOCAL-00421" />
+      <option name="project" value="LOCAL" />
+      <updated>1673152544945</updated>
+    </task>
+    <task id="LOCAL-00422" summary="[Done] Print headers">
+      <created>1673496763622</created>
+      <option name="number" value="00422" />
+      <option name="presentableId" value="LOCAL-00422" />
+      <option name="project" value="LOCAL" />
+      <updated>1673496763622</updated>
+    </task>
+    <task id="LOCAL-00423" summary="[Done] rows_highlight">
+      <created>1673498535465</created>
+      <option name="number" value="00423" />
+      <option name="presentableId" value="LOCAL-00423" />
+      <option name="project" value="LOCAL" />
+      <updated>1673498535465</updated>
+    </task>
+    <task id="LOCAL-00424" summary="[Done] rows_highlight">
+      <created>1673532543244</created>
+      <option name="number" value="00424" />
+      <option name="presentableId" value="LOCAL-00424" />
+      <option name="project" value="LOCAL" />
+      <updated>1673532543244</updated>
+    </task>
+    <task id="LOCAL-00425" summary="[Done] Proper elapsed time">
+      <created>1673583928732</created>
+      <option name="number" value="00425" />
+      <option name="presentableId" value="LOCAL-00425" />
+      <option name="project" value="LOCAL" />
+      <updated>1673583928732</updated>
+    </task>
+    <task id="LOCAL-00426" summary="[Done] Statistics screen shows proper unit">
+      <created>1673584240820</created>
+      <option name="number" value="00426" />
+      <option name="presentableId" value="LOCAL-00426" />
+      <option name="project" value="LOCAL" />
+      <updated>1673584240820</updated>
+    </task>
+    <task id="LOCAL-00427" summary="[WIP] Logs I">
+      <created>1673586089591</created>
+      <option name="number" value="00427" />
+      <option name="presentableId" value="LOCAL-00427" />
+      <option name="project" value="LOCAL" />
+      <updated>1673586089592</updated>
+    </task>
+    <task id="LOCAL-00428" summary="[WIP] Logs II">
+      <created>1673671403133</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1673671403134</updated>
+    </task>
+    <task id="LOCAL-00429" summary="[DONE] Logs &quot;More on the next page&quot;">
+      <created>1673754354290</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
+      <option name="project" value="LOCAL" />
+      <updated>1673754354290</updated>
+    </task>
+    <task id="LOCAL-00430" summary="Minor updates">
+      <created>1674101696033</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
+      <option name="project" value="LOCAL" />
+      <updated>1674101696034</updated>
+    </task>
+    <task id="LOCAL-00431" summary="[Done] Stubs on Logs page">
+      <created>1674275938055</created>
+      <option name="number" value="00431" />
+      <option name="presentableId" value="LOCAL-00431" />
+      <option name="project" value="LOCAL" />
+      <updated>1674275938055</updated>
+    </task>
+    <task id="LOCAL-00432" summary="[Done] Improve Stubs on Logs page">
+      <created>1674276219283</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
+      <option name="project" value="LOCAL" />
+      <updated>1674276219283</updated>
+    </task>
+    <task id="LOCAL-00433" summary="[Done] SCREEN_WIDTH 119 -&gt; 133">
+      <created>1674361245774</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1674361245774</updated>
+    </task>
+    <task id="LOCAL-00434" summary="[Done] Small refactoring">
+      <created>1675484397168</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
+      <option name="project" value="LOCAL" />
+      <updated>1675484397168</updated>
+    </task>
+    <task id="LOCAL-00435" summary="[Done] 133 -&gt; 137">
+      <created>1675656905491</created>
+      <option name="number" value="00435" />
+      <option name="presentableId" value="LOCAL-00435" />
+      <option name="project" value="LOCAL" />
+      <updated>1675656905492</updated>
+    </task>
+    <option name="localTasksCounter" value="436" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="072aee87-f8a8-4148-bf47-b5c1d6e6aa83">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/new_results_table" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="68cb2be2-75c1-4cd6-807a-6e36aa5be43c">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/new_results_table" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="6bf322b9-37e0-41e6-98d0-4e41158beede">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/new_results_table" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="a34ddfd9-21bb-4a07-9fb6-752bb041eda4">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="c54cef7e-efe0-44de-9103-91a85e4d1deb">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/new_results_table" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/new_results_table" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <MESSAGE value="[Done] New results table" />
+    <MESSAGE value="[WIP] Color to result table rows" />
+    <MESSAGE value="[Done] Color to result table rows" />
+    <MESSAGE value="[WIP] Headers, bottom line" />
+    <MESSAGE value="[WIP][Headers] Record -&gt; false" />
+    <MESSAGE value="[WIP][Headers] Add TODO" />
+    <MESSAGE value="[Refactoring] Add .gitignore" />
+    <MESSAGE value="[WIP] Adding headers" />
+    <MESSAGE value="[WIP] Deleting DB files from git" />
+    <MESSAGE value="[WIP] Disabled legacy" />
+    <MESSAGE value="[WIP] Disable legacy" />
+    <MESSAGE value="[WIP] Rework column adjustment mechanism" />
+    <MESSAGE value="[Done] Print headers" />
+    <MESSAGE value="[Done] rows_highlight" />
+    <MESSAGE value="[Done] Proper elapsed time" />
+    <MESSAGE value="[Done] Statistics screen shows proper unit" />
+    <MESSAGE value="[WIP] Logs I" />
+    <MESSAGE value="[WIP] Logs II" />
+    <MESSAGE value="[DONE] Logs &quot;More on the next page&quot;" />
+    <MESSAGE value="Minor updates" />
+    <MESSAGE value="[Done] Stubs on Logs page" />
+    <MESSAGE value="[Done] Improve Stubs on Logs page" />
+    <MESSAGE value="[Done] SCREEN_WIDTH 119 -&gt; 133" />
+    <MESSAGE value="[Done] Small refactoring" />
+    <MESSAGE value="[Done] 133 -&gt; 137" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Done] 133 -&gt; 137" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnlyOnFirst="true" notifyOnTerminate="true" ignoreLibraries="true" exception="builtins.AssertionError">
+            <option name="ignoreLibraries" value="true" />
+            <option name="notifyOnTerminate" value="true" />
+            <option name="notifyOnlyOnFirst" value="true" />
+          </properties>
+          <option name="timeStamp" value="128" />
+        </breakpoint>
+        <breakpoint type="python-exception">
+          <properties notifyOnlyOnFirst="true" notifyOnTerminate="true" ignoreLibraries="true" exception="builtins.Exception">
+            <option name="ignoreLibraries" value="true" />
+            <option name="notifyOnTerminate" value="true" />
+            <option name="notifyOnlyOnFirst" value="true" />
+          </properties>
+          <option name="timeStamp" value="136" />
+        </breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/REST/Endpoints/BaseEndpoint.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests/API/REST/test_exemplars_v2_withdraw.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests/API/GRPC/claims_api/test_withdraw_exemplars.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/GRPC/GRPC_Tracker/grpc_tracker.py</url>
+          <line>238</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/GRPC/GRPC_Tracker/grpc_tracker.py</url>
+          <line>223</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/REST/helpers.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/REST/REST_Tracker/rest_tracker.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests/API/REST/test_cargoboxes_withdraw.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/Screens/old/z_ThisMonthsReleasesScreen.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/TeverusSDK/old/z_Screen.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="claim[ClaimInfo.ID]" language="Python" />
+        <watch expression="test_file.readlines()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FinnishLearner$main.coverage" NAME="main Coverage Results" MODIFIED="1657366692998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Game_Releases_Tracker$main_v2.coverage" NAME="main_v2 Coverage Results" MODIFIED="1668141706206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Steam_Recommender$main.coverage" NAME="main Coverage Results" MODIFIED="1657515099282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Game_Releases_Tracker$.coverage" NAME=" Coverage Results" MODIFIED="1665982115923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Steam_Recommender$main_v4.coverage" NAME="main_v4 Coverage Results" MODIFIED="1657601237176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$helpers.coverage" NAME="helpers Coverage Results" MODIFIED="1664276344991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/REST" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$test.coverage" NAME="test Coverage Results" MODIFIED="1664276435575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Game_Releases_Tracker$main.coverage" NAME="main Coverage Results" MODIFIED="1668872667204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$get_endspoints_and_coverage.coverage" NAME="get_endspoints_and_coverage Coverage Results" MODIFIED="1660552863592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/API/API_Tracker" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$swagger_to_pydantic.coverage" NAME="swagger_to_pydantic Coverage Results" MODIFIED="1665228907953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/REST/REST_Tracker" />
+    <SUITE FILE_PATH="coverage/Game_Releases_Tracker$UpdateGames__1_.coverage" NAME="UpdateGames (1) Coverage Results" MODIFIED="1667019856806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/modules" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$.coverage" NAME=" Coverage Results" MODIFIED="1665741669310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests/API/REST" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$get_endpoints_and_coverage.coverage" NAME="rest_tracker Coverage Results" MODIFIED="1665121958387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/REST/REST_Tracker" />
+    <SUITE FILE_PATH="coverage/Steam_Recommender$main_v3.coverage" NAME="main_v3 Coverage Results" MODIFIED="1657535149917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Game_Releases_Tracker$UpdateGames.coverage" NAME="UpdateGames Coverage Results" MODIFIED="1667018723929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$grpc_tracker.coverage" NAME="grpc_tracker Coverage Results" MODIFIED="1665123204252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/GRPC/GRPC_Tracker" />
+    <SUITE FILE_PATH="coverage/Finnish_Learner$main.coverage" NAME="main Coverage Results" MODIFIED="1674359410061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chameleon_tests$get_endspoints_and_coverage__1_.coverage" NAME="get_endspoints_and_coverage (1) Coverage Results" MODIFIED="1659416585269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Code/API/API_Tracker" />
+    <SUITE FILE_PATH="coverage/Steam_Recommender$main_v2.coverage" NAME="main_v2 Coverage Results" MODIFIED="1657366816618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Steam_Recommender$test.coverage" NAME="test Coverage Results" MODIFIED="1657543322123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
